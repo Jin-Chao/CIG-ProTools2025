@@ -1,0 +1,33 @@
+desc SUM: access# miss# compulsory# conflict# capacity#
+desc CR: in_var out_var total# compulsory# conflict# capacity#
+desc CU: var access# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Line: /scratch/user/uqcjin/App/example/Simple/src/conflict.c:initialization:42
+SUM: 524291 131074 131072 0 2
+CR: A A 129124 129124 0 0
+CU: A 387372 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 129124
+Line: /scratch/user/uqcjin/App/example/Simple/src/conflict.c:initialization:47
+SUM: 524289 131073 131072 0 1
+CR: B A 63 63 0 0
+CR: B B 131008 131008 0 0
+CU: A 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64
+CU: B 393024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131008
+Line: /scratch/user/uqcjin/App/example/Simple/src/conflict.c:initialization:52
+SUM: 524289 131073 131072 0 1
+CR: C B 63 63 0 0
+CR: C C 131008 131008 0 0
+CU: B 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64
+CU: C 393024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131008
+Line: /scratch/user/uqcjin/App/example/Simple/src/conflict.c:initialization:57
+SUM: 524289 131073 131072 0 1
+CR: D C 63 63 0 0
+CR: D D 131008 131008 0 0
+CU: C 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64
+CU: D 393024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131008
+Line: /scratch/user/uqcjin/App/example/Simple/src/conflict.c:main:85
+SUM: 1572867 1572865 0 1179648 393217
+CR: A B 524288 0 393216 131072
+CR: B C 524256 0 393216 131040
+CR: C A 524256 0 393216 131040
+CU: A 0 0 0 0 524256 0 0 0 0 0 0 0 0 0 0 0 0
+CU: B 0 0 0 0 524288 0 0 0 0 0 0 0 0 0 0 0 0
+CU: C 0 0 0 0 524256 0 0 0 0 0 0 0 0 0 0 0 0

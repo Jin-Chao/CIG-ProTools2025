@@ -1,0 +1,165 @@
+#! /usr/bin/env python3
+
+import os
+import sys
+import subprocess
+import time
+import re
+import json
+from collections import defaultdict
+import argparse
+
+VALGRIND = "valgrind"
+TOOL = "--tool=cachegrind"
+SIM_ON = "--cache-sim=yes"
+I1_CFG = "--I1=32768,8,64" 
+D1_CFG = "--D1=49152,12,64"
+LL_CFG = "--LL=62914560,15,64"
+
+VAR_CFG = "-v"
+VAR_FILE = "varinfo.txt"
+SIZE_CFG = "-s"
+LOOP_CFG = "-l"
+BLOCK_CFG = "-b"
+CMD_RM = "rm"
+
+CG_OUTPUT = "cachegrind.out.*"
+CU_D1_OUTPUT = "cacheusage.d1.out.*"
+CU_LL_OUTPUT = "cacheusage.ll.out.*"
+CR_OUTPUT = "cacheusage.cr.out.*"
+
+CURRENT_DIR = "."
+EXP_DIR = os.path.join(CURRENT_DIR, "exp")
+CR_OUT_DIR = os.path.join(EXP_DIR, "cig")
+SIMPLE_DIR=os.path.join(CURRENT_DIR, "Simple/bin")
+HIMENO_DIR=os.path.join(CURRENT_DIR, "Himeno/bin")
+
+NUM_REPEAT=3
+
+pattern_matrix = r"Time:\s*([0-9]*\.?[0-9]+)\s+with the\s+(naive|blocked)\s+execution"
+pattern_himeno = r"MFLOPS measured\s*:\s*([0-9]+(?:\.[0-9]+)?)"
+
+# Define benchmarks
+benchmarks = {
+    "himeno": {
+        "exes": ["bmt_aos.O3"],
+        "path": HIMENO_DIR,
+        "sizes": [["M", "1000"], ["L", "100"], ["XL", "10"]],
+        "repeat": NUM_REPEAT,
+        "args": lambda sz: [SIZE_CFG, sz[0], LOOP_CFG, sz[1]],
+        "pattern": pattern_himeno,
+        "parser": lambda out: float(re.search(pattern_himeno, out).group(1)) if re.search(pattern_himeno, out) else None
+    },
+    "matrix": {
+        "exes": ["matrix"],
+        "path": SIMPLE_DIR,
+        "sizes": [["256", "8"], ["512", "16"], ["1024", "32"]],
+        "repeat": NUM_REPEAT,
+        "args": lambda sz: [SIZE_CFG, sz[0], BLOCK_CFG, sz[1]],
+        "pattern": pattern_matrix,
+        "parser": lambda out: {t: float(v) for v, t in re.findall(pattern_matrix, out)} if re.findall(pattern_matrix, out) else None
+    }
+}
+
+# Results
+native_results = defaultdict(lambda: defaultdict(list))
+cig_results = defaultdict(lambda: defaultdict(list))
+
+def get_default_core():
+    try:
+        # Available CPU IDs (Linux only)
+        cores = sorted(os.sched_getaffinity(0))
+        return cores[len(cores) // 2] if cores else 0
+    except AttributeError:
+        # Fallback: assume 4 cores
+        return 2
+
+def run_benchmarks(use_valgrind=False, core_id=None):
+    subprocess.run([CMD_RM, VAR_FILE], capture_output=True, text=True)
+    time.sleep(1)
+
+    for bmark, cfg in benchmarks.items():
+        for exe in cfg["exes"]:
+            for size in cfg["sizes"]:
+                for i in range(cfg["repeat"]):
+                    cmd = [os.path.join(cfg["path"], exe)] + cfg["args"](size)
+
+                    if use_valgrind:
+                        cmd = [VALGRIND, TOOL, SIM_ON] + cmd + [VAR_CFG, VAR_FILE]
+
+                    full_cmd = ["taskset", "-c", str(core_id)] + cmd
+
+                    start = time.time()
+                    try:
+                        res = subprocess.run(full_cmd, capture_output=True, text=True)
+                    except FileNotFoundError as e:
+                        print(f"ERROR: {e}")
+                        continue
+                    elapsed = time.time() - start
+
+                    print(f"{'Cachegrind' if use_valgrind else 'Native'} CMD:", " ".join(cmd))
+                    print(res.args)
+                    print(res.stdout)
+                    print(res.stderr)
+
+                    parsed = cfg["parser"](res.stdout)
+                    if parsed:
+                        target = cig_results if use_valgrind else native_results
+                        key = size[0]
+                        if isinstance(parsed, float):
+                            target[exe][key].append((parsed, elapsed))
+                        elif isinstance(parsed, dict):
+                            target[exe][key].append((*parsed.values(), elapsed))
+                    else:
+                        print(f"ERROR: Pattern not found in {exe} for size {size}")
+
+                    if use_valgrind:
+                        subprocess.run(f"{CMD_RM} {VAR_FILE}", shell=True, capture_output=True, text=True)
+                        subprocess.run(f"{CMD_RM} {CG_OUTPUT}", shell=True, capture_output=True, text=True)
+                        subprocess.run(f"{CMD_RM} {CU_D1_OUTPUT}", shell=True, capture_output=True, text=True)
+                        subprocess.run(f"{CMD_RM} {CU_LL_OUTPUT}", shell=True, capture_output=True, text=True)
+                        subprocess.run(f"{CMD_RM} {CR_OUTPUT}", shell=True, capture_output=True, text=True)
+                        print("all output files are removed! please confirm it!")
+                        time.sleep(10)
+
+def print_results():
+    def display(title, results):
+        print(f"\n=== {title} ===")
+        for exe, sz_dict in results.items():
+            print(f"{exe}")
+            for sz, runs in sz_dict.items():
+                print(f"  Size {sz}")
+                for r in runs:
+                    print("   ", r)
+
+    display("Native", native_results)
+    display("CIG", cig_results)
+
+def save_results(json_file):
+    def to_jsonable(data):
+        return {
+            exe: {sz: [list(r) for r in runs] for sz, runs in sz_dict.items()}
+            for exe, sz_dict in data.items()
+        }
+
+    with open(json_file, "w") as f:
+        json.dump({
+            "Native": to_jsonable(native_results),
+            "CIG": to_jsonable(cig_results)
+        }, f, indent=2)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run Himeno and Matrix benchmarks with optional core binding and JSON output.")
+    parser.add_argument("--core", type=int, help="Bind execution to a specific CPU core. If not specified, the middle core is used.")
+    parser.add_argument("--output", type=str, help="Path to save output JSON file.")
+    args = parser.parse_args()
+
+    chosen_core = args.core if args.core is not None else get_default_core()
+    print(f"Running benchmarks on core {chosen_core}")
+
+    run_benchmarks(use_valgrind=False, core_id=chosen_core)
+    run_benchmarks(use_valgrind=True, core_id=chosen_core)
+    print_results()
+
+    if args.output:
+        save_results(args.output)

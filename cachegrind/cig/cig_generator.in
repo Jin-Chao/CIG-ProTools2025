@@ -1,0 +1,735 @@
+#! /usr/bin/env python3
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+#---- This script generates a CIG (Cache Interaction Graph) from a CU-format output file created by Cachegrind with the CIG extension. 
+#-------------------------------------------------------------------------------------------------------------------------------------
+
+import os
+import sys
+import re
+import argparse
+from collections import defaultdict
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.backends.backend_pdf import PdfPages
+
+import math
+import networkx as nx
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+from ipywidgets import interact, interactive_output, FloatSlider, Dropdown, SelectMultiple, HBox, VBox
+import ipywidgets as widgets
+
+# Define miss types and colors for different miss types
+miss_types = [
+    "Compulsory", 
+    "Conflict", 
+    "Capacity"
+]
+
+miss_colors = {
+    "Compulsory": "red",
+    "Conflict": "green",
+    "Capacity": "purple"
+}
+
+rad_values = {
+    "Compulsory": 0.1,
+    "Conflict": 0.2,
+    "Capacity": 0.5
+}
+
+num_elements_summary = 5 #Default Option
+num_elements_cr = 4      #Default Option
+num_elements_cu = 8      #Default Option
+
+idx_sum_access = 0
+idx_sum_miss = 1 
+idx_sum_compulsory = 2
+idx_sum_conflict = 3
+idx_sum_capacity = 4
+
+idx_cr_total = 0
+idx_cr_compulsory = 1
+idx_cr_conflict = 2
+idx_cr_capacity = 3
+
+idx_cu_access = 0
+
+def round_up_dynamic(x):
+    if x == 0:
+        return 0
+
+    exponent = math.floor(math.log10(abs(x)))
+    factor = 10 ** (-exponent)
+    return math.ceil(x * factor) / factor
+    
+def plot_cig_whole_upgrade(data_whole, threshold = 0.0, miss_type_filter=None, output_pdf=None):
+    edges = []
+    edge_colors = []
+    edge_widths = []
+    weights = []
+    cs = []
+
+    # Create a MultiDiGraph (to allow multiple edges between same nodes)
+    G = nx.MultiDiGraph()
+
+    idx = 0
+    for var_pair, counts in data_whole["cr"].items():
+
+        dst, src = var_pair 
+        total, compulsory, conflict, capacity = counts
+
+        if (total < data_whole["sum"][0] * threshold):
+            continue;
+
+        if compulsory > 0 and (not miss_type_filter or 'Compulsory' in miss_type_filter) :
+            G.add_edge(src, dst, weight=compulsory, label="Compulsory")
+            edge_colors.append(miss_colors["Compulsory"])
+            weights.append(compulsory)
+            cs.append(f'arc3,rad={rad_values["Compulsory"]}')
+            edges.append((src, dst))
+            #print(idx, src, dst, miss_colors["Compulsory"], compulsory)
+            #idx += 1
+        if conflict > 0 and (not miss_type_filter or 'Conflict' in miss_type_filter) :
+            G.add_edge(src, dst, weight=conflict, label="Conflict")
+            edge_colors.append(miss_colors["Conflict"])
+            weights.append(conflict)
+            cs.append(f'arc3,rad={rad_values["Conflict"]}')
+            edges.append((src, dst))
+            #print(idx, src, dst, miss_colors["Conflict"], conflict)
+            #idx += 1
+        if capacity > 0 and (not miss_type_filter or 'Capacity' in miss_type_filter) :
+            G.add_edge(src, dst, weight=capacity, label="Capacity")
+            edge_colors.append(miss_colors["Capacity"])
+            weights.append(capacity)
+            cs.append(f'arc3,rad={rad_values["Capacity"]}')
+            edges.append((src, dst))
+            #print(idx, src, dst, miss_colors["Capacity"], capacity)
+            #idx += 1
+
+    if(len(weights) == 0):
+        return 
+
+    max_weight = max(weights)
+    scaled_weight = np.log1p(weights)*5/np.log1p(max_weight)
+#    scaled_weight = np.log1p(max_weight) / np.log1p(weights) 
+
+    # Node positions (force-directed layout)
+    pos = nx.shell_layout(G)
+    
+    fig = plt.figure(figsize=(10, 6))
+    ax = plt.gca()
+
+    # Draw nodes and node labels
+    nx.draw_networkx_nodes(G, pos, node_size=1000, node_color="lightblue", alpha=0.5)
+    nx.draw_networkx_labels(G, pos, font_size=20, font_weight="bold")
+    
+    # Draw edges with multiple colors, and different widths
+    nx.draw_networkx_edges(G, pos, edgelist=edges, edge_color=edge_colors, connectionstyle=cs, width=scaled_weight, arrows=True, alpha=0.8)
+
+    # Draw edge labels
+    edge_labels = {
+        tuple(edge): f"{attrs['weight']:,}"
+        for *edge, attrs in G.edges(keys=True, data=True)
+    }
+
+    #nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, connectionstyle=cs, label_pos=0.5, bbox={"alpha": 0});
+    nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, connectionstyle=cs, label_pos=0.5, bbox=dict(facecolor='white', edgecolor='none', boxstyle='round,pad=0.2',alpha=0.6));
+    
+    # Create a legend for different miss types
+    legend_patches = [mpatches.Patch(color=color, label=miss_type) for miss_type, color in miss_colors.items()]
+    plt.legend(handles=legend_patches, title="Miss Types")
+    
+    # Title
+    plt.title(f"Cache Interaction Graph for the Whole Program")
+    
+    # Show plot
+    if output_pdf:
+        pdf.savefig(fig, bbox_inches='tight', pad_inches=0)
+        plt.close()
+    else:
+        plt.show()
+
+
+def plot_cig_per_func_upgrade(data_funcs, function = None, threshold = 0.0, miss_type_filter = None, draw_label = True, output_pdf = None):
+
+    # Iterate through the funcs data and create separate matrices for each metric
+    for func, details in data_funcs.items():
+        if function is not None:
+            func_name = func.split(":", 1)[1]
+            if function not in func_name:
+                continue;
+        edges = []
+        edge_colors = []
+        edge_widths = []
+        weights = []
+        cs = []
+
+        miss_added = {
+            "Compulsory": False,
+            "Conflict": False,
+            "Capacity": False 
+        }
+
+        # Create a MultiDiGraph (to allow multiple edges between same nodes)
+        G = nx.MultiDiGraph()
+        # Print variable interactions
+        for pair, counts in details["cr"].items():
+
+            dst, src = pair 
+            total, compulsory, conflict, capacity = counts
+
+            if (total < details["sum"][1] * threshold):
+                continue;
+
+            if compulsory > 0 and (not miss_type_filter or 'Compulsory' in miss_type_filter) :
+                G.add_edge(src, dst, weight=compulsory, label="Compulsory")
+                edge_colors.append(miss_colors["Compulsory"])
+                weights.append(compulsory)
+                cs.append(f'arc3, rad={rad_values["Compulsory"]}')
+                edges.append((src, dst))
+                miss_added["Compulsory"]=True
+            if conflict > 0 and (not miss_type_filter or 'Conflict' in miss_type_filter) :
+                G.add_edge(src, dst, weight=conflict, label="Conflict")
+                edge_colors.append(miss_colors["Conflict"])
+                weights.append(conflict)
+                cs.append(f'arc3, rad={rad_values["Conflict"]}')
+                edges.append((src, dst))
+                miss_added["Conflict"]=True
+            if capacity > 0 and (not miss_type_filter or 'Capacity' in miss_type_filter) :
+                G.add_edge(src, dst, weight=capacity, label="Capacity")
+                edge_colors.append(miss_colors["Capacity"])
+                weights.append(capacity)
+                cs.append(f'arc3, rad={rad_values["Capacity"]}')
+                edges.append((src, dst))
+                miss_added["Capacity"]=True
+
+        if(len(weights) == 0):
+            continue 
+
+        max_weight = max(weights)
+        scaled_weight = np.log1p(weights)*5/np.log1p(max_weight)
+
+        # Node positions (force-directed layout)
+        pos = nx.shell_layout(G)
+
+        #capacity miss is dominate, we show spatial and temporay locality for each variable
+        #display_locality =  True
+        display_locality =  details["sum"][idx_sum_capacity] > details["sum"][1] * 0.5
+
+        if display_locality:
+            #fig, (ax_graph, ax_table) = plt.subplots(1, 2, figsize=(12, 6))
+            fig = plt.figure(figsize=(12, 6))
+            gs = fig.add_gridspec(1, 2, width_ratios=[3, 1])
+            ax_graph = fig.add_subplot(gs[0])
+            ax_table = fig.add_subplot(gs[1])
+        else:
+            fig, ax_graph = plt.subplots(figsize=(8, 6))
+
+        # Draw nodes and node labels
+        nx.draw_networkx_nodes(G, pos, ax=ax_graph, node_size=1000, node_color="lightblue", alpha=0.5)
+        nx.draw_networkx_labels(G, pos, ax=ax_graph, font_size=20, font_weight="bold")
+
+        # Draw edges with multiple colors, and different widths
+        nx.draw_networkx_edges(G, pos, ax=ax_graph, edgelist=edges, edge_color=edge_colors, connectionstyle=cs, width=scaled_weight, arrows=True, alpha=0.8)
+
+        edge_labels = {
+            tuple(edge): f"{attrs['weight']:,}"
+            for *edge, attrs in G.edges(keys=True, data=True)
+        }
+        label_connections = [f"arc3,rad={rad_values[d['label']]}" for u, v, d in G.edges(data=True)]
+        if draw_label:
+            nx.draw_networkx_edge_labels(G, pos, ax=ax_graph, edge_labels=edge_labels, connectionstyle=cs, label_pos=0.3, bbox=dict(facecolor='white', edgecolor='none', boxstyle='round,pad=0.2',alpha=0.6));
+#            nx.draw_networkx_edge_labels(G, pos, ax=ax_graph, edge_labels=edge_labels, connectionstyle=cs, label_pos=0.3, font_size=12, bbox=dict(facecolor='white', edgecolor='none', boxstyle='round,pad=0.2',alpha=0.6));
+        
+        # Create a legend for different miss types
+        legend_patches = [
+            mpatches.Patch(color=color, label=miss_type) 
+            for miss_type, color in miss_colors.items() 
+            if miss_added.get(miss_type, False)
+        ]
+
+        ax_graph.legend(handles=legend_patches, title="Miss Types")
+        
+        # Title
+        ax_graph.set_title(f"Cache Interaction Graph for {func}")
+        
+        if display_locality:
+            #locality = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            locality = [0] * num_elements_cu;
+            table_data = []
+            for var, counts in details["cu"].items():
+                for i in range(num_elements_cu): 
+                    locality[i] =+ counts[i] 
+
+                denom = sum(counts[1:])
+                reuse_weighted_sum = sum(count * (idx + 1) for idx, count in enumerate(counts[1:]))
+                if denom != 0:
+                    avg_words_per_line = reuse_weighted_sum / denom
+                else :
+                    avg_words_per_line = 0.0
+
+                if reuse_weighted_sum != 0:
+                    reuse_per_word = counts[0]/reuse_weighted_sum
+                else :
+                    reuse_per_word = 0.0 
+
+                table_data.append([var, f"{avg_words_per_line:.2f}", f"{reuse_per_word:.2f}"])
+                #table_data.append([var, 
+                #    f"{sum(count*(idx+1) for idx, count in enumerate(counts[1:]))/sum(counts[1:]):.2f}", #averaged words# used per cacheline
+                #    f"{(counts[0]/sum(count*(idx+1) for idx, count in enumerate(counts[1:]))):.2f}"])  #averaged resue times per word
+
+            # Set column headers
+            column_labels = ["VAR", "Word#", "Reuse#"]
+        
+            ax_table.axis("tight")
+            ax_table.axis("off")
+            table = ax_table.table(cellText=table_data, colLabels=column_labels, loc="center", colWidths=[0.24, 0.26, 0.3])
+            table.auto_set_font_size(True)
+            #table.set_fontsize(14)
+            #spatial_loc = sum(count*(idx+1) for idx, count in enumerate(locality[1:]))/sum(locality[1:])
+            #tempory_loc = locality[0]/sum(count*(idx+1) for idx, count in enumerate(locality[1:]))
+            #ax_table.set_title(f"Spatial Usage\n(Out of 8 words) {spatial_loc:.2f} : {tempory_loc:.2f}")
+            ax_table.set_title(f"Data Locality\n({num_elements_cu - 1} words per cache line)")
+            plt.tight_layout()
+
+        plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+        # Show plot
+        if output_pdf:
+            #pdf.savefig()
+            pdf.savefig(fig, bbox_inches='tight', pad_inches=0)
+            plt.close()
+        else:
+            plt.show()
+
+def plot_cig_per_line_upgrade(data_lines, output_pdf=None):
+    # Iterate through the lines data and create separate matrices for each metric
+    for line, details in data_lines.items():
+        #print(line)
+        # Get variables for the line
+        match = re.search(r"(?P<file_path>[\w./-]+):(?P<func_name>[\w.]+):(?P<line_number>\d+)", line)
+        if match:
+           file_path = match.group("file_path")
+           file_name = os.path.basename(file_path)
+           func_name = match.group("func_name")
+           line_number = int(match.group("line_number"))
+
+        edges = []
+        edge_colors = []
+        edge_widths = []
+        weights = []
+        cs = []
+
+        # Create a MultiDiGraph (to allow multiple edges between same nodes)
+        G = nx.MultiDiGraph()
+        # Print variable interactions
+        idx = 0
+        #print(line)
+        for pair, counts in details["cr"]:
+
+            src, dst = pair 
+            total, compulsory, conflict, capacity = counts
+
+            #print(pair, counts)
+            if compulsory > 0:
+                G.add_edge(src, dst, weight=compulsory, label="Compulsory")
+                edge_colors.append(miss_colors["Compulsory"])
+                weights.append(compulsory)
+                cs.append(f'arc3, rad={rad_values["Compulsory"]}')
+                edges.append((src, dst))
+                #print(idx, src, dst, miss_colors["Compulsory"], compulsory)
+                #idx += 1
+            if conflict > 0:
+                G.add_edge(src, dst, weight=conflict, label="Conflict")
+                edge_colors.append(miss_colors["Conflict"])
+                weights.append(conflict)
+                cs.append(f'arc3, rad={rad_values["Conflict"]}')
+                edges.append((src, dst))
+                #print(idx, src, dst, miss_colors["Conflict"], conflict)
+                #idx += 1
+            if capacity > 0:
+                G.add_edge(src, dst, weight=capacity, label="Capacity")
+                edge_colors.append(miss_colors["Capacity"])
+                weights.append(capacity)
+                cs.append(f'arc3, rad={rad_values["Capacity"]}')
+                edges.append((src, dst))
+                #print(idx, src, dst, miss_colors["Capacity"], capacity)
+                #idx += 1
+        
+        #for idx, style in enumerate(cs):
+        #    print(idx, style)
+
+        if(len(weights) == 0):
+            #print("No weights")
+            continue 
+
+        max_weight = max(weights)
+        scaled_weight = np.log1p(weights)*5/np.log1p(max_weight)
+
+        # Node positions (force-directed layout)
+        pos = nx.shell_layout(G)
+        
+        # Draw nodes and node labels
+        plt.figure(figsize=(10, 6))
+        nx.draw_networkx_nodes(G, pos, node_size=1000, node_color="lightblue", alpha=0.5)
+        nx.draw_networkx_labels(G, pos, font_size=10, font_weight="bold")
+        
+        # Draw edges with multiple colors, and different widths
+        nx.draw_networkx_edges(G, pos, edgelist=edges, edge_color=edge_colors, connectionstyle=cs, width=scaled_weight, arrows=True, alpha=0.8)
+        
+        edge_labels = {
+            tuple(edge): f"{attrs['weight']}"
+            for *edge, attrs in G.edges(keys=True, data=True)
+        }
+        label_connections = [f"arc3,rad={rad_values[d['label']]}" for u, v, d in G.edges(data=True)]
+        nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, connectionstyle=cs, label_pos=0.3, bbox={"alpha": 0});
+        
+        # Create a legend for different miss types
+        legend_patches = [mpatches.Patch(color=color, label=miss_type) for miss_type, color in miss_colors.items()]
+        plt.legend(handles=legend_patches, title="Miss Types")
+        
+        # Title
+        plt.title(f"Cache Interactiton Graph for {file_name} at {func_name}:{line_number}")
+        
+        # Show plot
+        if output_pdf:
+            pdf.savefig()
+            plt.close()
+        else:
+            plt.show()
+
+def parse_cig_data(cig_name):
+    expected_prefixes = ["desc SUM:", "desc CR:", "desc CU:"]
+
+    global num_elements_summary, num_elements_cr, num_elements_cu, idx_sum_access, idx_sum_miss, idx_sum_compulsory, idx_sum_conflict, idx_sum_capacity, idx_cr_total, idx_cr_compulsory, idx_cr_conflict, idx_cr_capacity, idx_cu_access
+
+    data_lines = defaultdict(lambda: {"sum": [], "cu": [], "cr": []})
+    data_funcs = {}
+    data_whole = {}
+    #data_funcs = defaultdict(lambda: {"sum": [0, 0, 0, 0, 0], "cu": defaultdict(lambda: [0, 0, 0, 0, 0, 0, 0, 0, 0]), "cr": defaultdict(lambda: [0, 0, 0, 0])})
+    #data_whole = {"sum": [0, 0, 0, 0, 0], "cu": defaultdict(lambda: [0, 0, 0, 0, 0, 0, 0, 0, 0]), "cr": defaultdict(lambda: [0, 0, 0, 0])}
+    current_line = None
+    current_func = None
+
+    try:
+        with open(cig_name, "r") as file:
+            lines = [file.readline().strip() for _ in range(3)]
+            for i, (line, expected) in enumerate(zip(lines, expected_prefixes)):
+                if not line.startswith(expected):
+                    raise ValueError(f"Line {i+1} does not start with '{expected}':\n Actual: '{line}'")
+
+            sum_fields = [word for word in lines[0].split() if word.endswith('#')]
+            cr_fields = [word for word in lines[1].split() if word.endswith('#')]
+            cu_fields = [word for word in lines[2].split() if word.endswith('-words') or word.endswith('#')]
+
+            num_elements_summary = len(sum_fields)
+            num_elements_cr = len(cr_fields)
+            num_elements_cu = len(cu_fields)
+
+            data_funcs = defaultdict(lambda: {"sum": [0] * num_elements_summary, 
+                                              "cu": defaultdict(lambda: [0] * num_elements_cu), 
+                                              "cr": defaultdict(lambda: [0] * num_elements_cr)})
+            data_whole = {"sum": [0] * num_elements_summary, 
+                          "cu": defaultdict(lambda: [0] * num_elements_cu), 
+                          "cr": defaultdict(lambda: [0] * num_elements_cr)}
+
+            sum_tokens = lines[0].split()[2:]
+            cr_tokens = lines[1].split()[2:]
+            cu_tokens = lines[2].split()[2:]
+
+            sum_indices = {name: idx for idx, name in enumerate(sum_tokens)}
+            idx_sum_access = sum_indices.get('access#')
+            idx_sum_miss = sum_indices.get('miss#')
+            idx_sum_compulsory = sum_indices.get('compulsory#')
+            idx_sum_conflict = sum_indices.get('conflict#')
+            idx_sum_capacity = sum_indices.get('capacity#')
+
+            cr_indices = {name: idx for idx, name in enumerate(cr_tokens)}
+            idx_cr_total = cr_indices.get('total#') - 2
+            idx_cr_compulsory = cr_indices.get('compulsory#') - 2
+            idx_cr_conflict = cr_indices.get('conflict#') - 2
+            idx_cr_capacity = cr_indices.get('capacity#') - 2
+
+            cu_indices = {name: idx for idx, name in enumerate(cu_tokens)}
+            idx_cu_access = cu_indices.get('access#') - 1
+
+            #print(num_elements_summary, num_elements_cu, num_elements_cr)
+            #print(idx_sum_access, idx_sum_miss, idx_sum_compulsory, idx_sum_conflict, idx_sum_capacity)
+            #print(idx_cr_total, idx_cr_compulsory, idx_cr_conflict, idx_cr_capacity)
+            #print(idx_cu_access)
+
+            remaining_lines = file.readlines()
+            for line in remaining_lines:
+                line = line.strip()
+
+                #print(line)
+                # Detect a line of source code
+                if line.startswith("Line:"):
+                    line_match = re.search(r"Line:\s*(?P<file_path>[\w./-]+):(?P<func_name>[\w.]+):(?P<line_number>\d+)", line)
+            
+                    if line_match:
+                        file_path = line_match.group("file_path")
+                        file_name = os.path.basename(file_path)
+                        func_name = line_match.group("func_name")
+                        line_num = line_match.group("line_number")
+
+                        current_func = file_name + ":" + func_name 
+                        current_line = file_name + ":" + func_name + ":" + line_num
+
+                # Detect a summary line
+                elif line.startswith("SUM:"):
+                    if re.match(r"SUM: (.+)", line):
+                        tokens = line.split()
+                        counts = list(map(int, tokens[1:]))
+                        data_lines[current_line]["sum"].append(counts)
+
+                        # Aggregate miss counts for func
+                        data_funcs[current_func]["sum"] = [
+                            data_funcs[current_func]["sum"][i] + counts[i] for i in range(num_elements_summary)
+                        ]
+
+                        # Aggregate miss counts for whole 
+                        data_whole["sum"] = [
+                            data_whole["sum"][i] + counts[i] for i in range(num_elements_summary)
+                        ]
+
+                # Detect a variable cache usage line 
+                elif line.startswith("CU:"):
+                    if re.match(r"CU: [a-zA-Z0-9_]+\s+\d+", line):
+                        tokens = line.split()
+                        var  = tokens[1]
+                        counts = list(map(int, tokens[2:]))
+                        data_lines[current_line]["cu"].append((var, counts))
+
+                        # Aggregate miss counts for func
+                        data_funcs[current_func]["cu"][var] = [
+                            data_funcs[current_func]["cu"][var][i] + counts[i] for i in range(num_elements_cu)
+                        ]
+
+                        # Aggregate miss counts for whole
+                        data_whole["cu"][var] = [
+                            data_whole["cu"][var][i] + counts[i] for i in range(num_elements_cu)
+                        ]
+                        #print(tokens, var, counts)
+                # Detect a variable interaction line
+                elif re.match(r"CR: [a-zA-Z0-9_]+\s+[a-zA-Z0-9_]+\s+\d+", line):
+                    tokens = line.split()
+                    var_1, var_2 = tokens[1], tokens[2]
+                    counts = list(map(int, tokens[3:]))
+                    data_lines[current_line]["cr"].append(((var_1, var_2), counts))
+
+                    # Aggregate miss counts for func
+                    data_funcs[current_func]["cr"][(var_1, var_2)] = [
+                        data_funcs[current_func]["cr"][(var_1, var_2)][i] + counts[i] for i in range(num_elements_cr)
+                    ]
+
+                    # Aggregate miss counts for whole
+                    data_whole["cr"][(var_1, var_2)] = [
+                        data_whole["cr"][(var_1, var_2)][i] + counts[i] for i in range(num_elements_cr)
+                    ]
+
+    except FileNotFoundError:
+        print(f"Error: The file '{cig_name}' does not exist.")
+        sys.exit(1)
+
+    return data_whole, data_funcs, data_lines
+
+def print_parsed_lines(data_lines):
+    """ Prints the parsed cache data in a readable format. """
+    for line, details in data_lines.items():
+        print(f"Line: {line}")
+
+        for counts in details["sum"]: 
+            print(f"    {counts}")
+
+        for var, counts in details["cu"]:
+            print(f"    {var}: {counts}")
+
+        for pair, counts in details["cr"]:
+            print(f"    {pair[0]} -> {pair[1]}: {counts}")
+
+def print_parsed_funcs(data_funcs):
+    """ Prints the aggregated cache data in a readable format. """
+    for func, details in data_funcs.items():
+        print(f"Func: {func}")
+
+        print(f"    {', '.join(str(count) for count in details['sum'])}")
+
+        for var, counts in details["cu"].items():
+            print(f"    {var}: {counts}")
+
+        for pair, counts in details["cr"].items():
+            print(f"    {pair[0]} -> {pair[1]}: {counts}")
+
+def print_parsed_whole(data_whole):
+    """ Prints the aggregated cache data in a readable format. """
+    
+    print()
+    print("Cache measurements for the whole program:")
+    print("The total of data accesses: ", data_whole["sum"][idx_sum_access]);
+    print("The total of cache misses: ", data_whole["sum"][idx_sum_miss]);
+    print("The total of compulosry misses: ", data_whole["sum"][idx_sum_compulsory]);
+    print("The total of conflict misses: ", data_whole["sum"][idx_sum_conflict]);
+    print("The total of capacity misses: ", data_whole["sum"][idx_sum_capacity]);
+
+    for var, counts in data_whole["cu"].items():
+        print(f"    {var}: {counts}")
+
+    for pair, counts in data_whole["cr"].items():
+        print(f"    {pair[0]} -> {pair[1]}: {counts}")
+
+        
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="")
+    parser.add_argument("--cig", type=str, help="Input CIG file.")
+    parser.add_argument("--output", type=str, help="Output PDF file.")
+    parser.add_argument("--debug", action='store_true', help="Print CIG data.")
+    parser.add_argument("--threshold", type=float, help="Threashold to ommit details.")
+    parser.add_argument("--function", type=str, help="A function name to focus.")
+    parser.add_argument("--miss", type=str, help="A speficif cache miss type.")
+
+    args = parser.parse_args()
+
+    if args.cig is None:
+        print(f"Please specify CIG file name using --cig <cig_file_name>")
+        sys.exit(1)
+
+    cig_name = args.cig
+
+    # Parse the cache output file
+    try:
+        data_whole, data_funcs, data_lines  = parse_cig_data(cig_name)
+    except ValueError as e:
+        print(f"CIG file format error: {e}")
+        sys.exit(1)
+
+    if args.debug:
+        print_parsed_lines(data_lines)
+        print_parsed_funcs(data_funcs)
+        print_parsed_whole(data_whole)
+        plot_cig_whole_upgrade(data_whole, 0.0)
+        plot_cig_per_func_upgrade(data_funcs, 0.0)
+        plot_cig_per_line_upgrade(data_lines)
+        exit(0)
+
+    if args.output is not None:
+        if args.function is not None:
+            threshold = 0.0
+            if args.threshold is not None:
+                threshold = args.threshold
+            miss_type = None
+            if args.miss is not None:
+                miss_type = args.miss
+            with PdfPages(args.output) as pdf:
+                plot_cig_per_func_upgrade(data_funcs, args.function, threshold, miss_type, True, pdf)
+        else:
+            with PdfPages(args.output) as pdf:
+                plot_cig_whole_upgrade(data_whole, 0.0, pdf)
+                plot_cig_per_func_upgrade(data_funcs, 0.0, pdf, True)
+                plot_cig_per_line_upgrade(data_lines, pdf)
+    else:
+        max_miss_whole = max(counts[0] for pair, counts in data_whole["cr"].items())
+        max_threshold_whole = max_miss_whole / data_whole["sum"][0]
+
+        max_threshold_func = max (
+            max(counts[0] for counts in details["cr"].values()) / details["sum"][0] 
+            for details in data_funcs.values()
+        )
+
+        def get_slider_params(choice):
+            if choice == 'Whole Program':
+                max_val = round_up_dynamic(max_threshold_whole)
+                step = max_threshold_whole / 100
+            elif choice == 'per Function':
+                # Adjust these values as needed
+                max_val = round_up_dynamic(max_threshold_func)
+                step = max_threshold_func / 100
+            elif choice == 'per Line':
+                max_val = 1.0
+                step = 0.05
+            return max_val, step
+        
+        def update_slider_params(change):
+            new_choice = change['new']
+            new_max, new_step = get_slider_params(new_choice)
+            threshold_slider.max = new_max
+            threshold_slider.step = new_step
+            # Optionally, reset the slider value
+            threshold_slider.value = 0.0
+        
+        def on_widget_change(change):
+            combined_plot(threshold=threshold_slider, function_choice=function_choice, miss_type=miss_sel)
+
+        common_style={'description_width': '100px'}
+        common_layout=widgets.Layout(width='300px', height='40px')
+        # Create dropdown widget
+        function_choice = Dropdown(
+            description="Scope:",
+            style=common_style,
+            layout=common_layout,
+            options=['Whole Program', 'per Function', 'per Line'],
+            value='Whole Program'
+        )
+                
+        # Create floatslider widget
+        # Create FloatSlider using parameters for the initial scope
+        max_val, step = get_slider_params(function_choice.value)
+        threshold_slider = FloatSlider(
+            description="Omitting details:",
+            style=common_style,
+            layout=common_layout,
+            min=0.0,
+            max=max_val,
+            step=step,
+            value=0.0
+        )
+
+        miss_sel = SelectMultiple(
+            description="Miss Types:", 
+           	options=miss_types, 
+            value=tuple(miss_types), 
+            style=common_style, 
+            layout=common_layout,
+            row=3
+        )                
+
+        bigger_font = """
+        <style>
+        .widget-label {font-size: 18px;}
+        .widget-inline-hbox .widget-label{min-width:150px;} {font-size: 16px;}
+        <style>
+        """
+        display(widgets.HTML(value=bigger_font))
+
+        #interactive plotting
+        def combined_plot(threshold, function_choice, miss_type):
+            if function_choice == "Whole Program":
+                plot_cig_whole_upgrade(data_whole, threshold, miss_type_filter=miss_type)
+            elif function_choice == "per Function":
+                plot_cig_per_func_upgrade(data_funcs, None, threshold, miss_type, True, None)
+            elif function_choice == "per Line":
+                plot_cig_per_line_upgrade(data_lines)
+
+        # Define an observer function to update slider parameters when function_choice changes
+        # Attach the observer to the dropdown's 'value'
+        function_choice.observe(update_slider_params, names='value')
+        #function_choice.observe(on_widget_change, names='value')
+        #threshold_slider.observe(on_widget_change, names='value')
+
+        #combined_plot(threshold=threshold_slider, function_choice=function_choice, miss_type=miss_sel)
+        # Now, use interact with the two widgets
+        #interact(combined_plot, threshold=threshold_slider, function_choice=function_choice, miss_type=miss_sel)
+
+        out = interactive_output(
+            combined_plot,
+            {
+                'threshold': threshold_slider,
+                'function_choice': function_choice,
+                'miss_type': miss_sel
+            }
+        )
+
+        row_layout = VBox([HBox([threshold_slider, function_choice, miss_sel]), out])
+        display(row_layout)

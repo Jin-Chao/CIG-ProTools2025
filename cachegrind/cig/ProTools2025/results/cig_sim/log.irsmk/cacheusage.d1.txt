@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /home/uqcjin/bin/valgrind/bin/cu_annotate cacheusage.d1.out.42598
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         49152 B, 64 B, 12-way associative
+LL cache:         62914560 B, 64 B, 15-way associative
+WordSize:         4
+Command:          ./IRSmk/bin/irsmk.ori -i ./IRSmk/Input/irsmk_input -v varinfo.txt
+Histogram bins recorded:  Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bins shown:     Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bin sort order: Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#__ Conf#___ Cap#____ Cacheline# 1-words 2-words_ 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+         32.3% 2,317,263,868 (100.0%)  (0.0%)  (84.8%)  (15.2%)          3/2  (0.0%)  (94.5%)  (0.0%)  (0.8%)  (0.0%)  (2.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)  (0.0%)  (0.1%)  (0.0%)  (1.5%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#____ Comp#__ Conf#___ Cap#____ Cacheline# 1-words 2-words_ 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  file:function
+
+<          32.3% 2,316,620,007 (100.0%)  (0.0%)  (84.8%)  (15.2%)          3/2  (0.0%)  (94.5%)  (0.0%)  (0.8%)  (0.0%)  (2.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)  (0.0%)  (0.1%)  (0.0%)  (1.5%)  /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3
+
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#____ Comp#__ Conf#___ Cap#____ Cacheline# 1-words 2-words_ 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  function:file
+
+>          32.3% 2,316,620,007 (100.0%)  (0.0%)  (84.8%)  (15.2%)          3/2  (0.0%)  (94.5%)  (0.0%)  (0.8%)  (0.0%)  (2.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)  (0.0%)  (0.1%)  (0.0%)  (1.5%)  rmatmult3:/scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c
+
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#__ Conf#___ Cap#____ Cacheline# 1-words 2-words_ 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+             0             0   (0.0%)  (0.0%)   (0.0%)   (0.0%)            0  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)    annotated: files known & above threshold & readable, line numbers known
+             0             0   (0.0%)  (0.0%)   (0.0%)   (0.0%)            0  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)    annotated: files known & above threshold & readable, line numbers unknown
+             0             0   (0.0%)  (0.0%)   (0.0%)   (0.0%)            0  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  unannotated: files known & above threshold & two or more non-identical
+         32.3% 2,316,620,007 (100.0%)  (0.0%)  (84.8%)  (15.2%)          3/2  (0.0%)  (94.5%)  (0.0%)  (0.8%)  (0.0%)  (2.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)  (0.0%)  (0.1%)  (0.0%)  (1.5%)  unannotated: files known & above threshold & unreadable 
+         59.2%       642,211   (0.0%)  (13.3%)  (86.6%)   (0.1%)          1/1  (0.0%)  (98.8%)  (0.0%)  (0.1%)  (0.0%)  (0.1%)  (0.0%)  (0.1%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.1%)  (0.0%)  (0.0%)  (0.6%)  unannotated: files known & below threshold
+          3.0%         1,650   (0.0%)  (57.6%)   (0.6%)  (35.5%)         30/1  (2.3%)   (3.7%)  (4.5%)  (7.3%)  (1.2%)  (1.8%)  (5.3%)  (6.5%)  (14.3%)  (7.8%)  (13.6%)  (4.9%)  (3.8%)  (3.7%)  (1.2%)  (17.9%)  unannotated: files unknown
+

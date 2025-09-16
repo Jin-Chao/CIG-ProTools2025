@@ -1,0 +1,154 @@
+#! /usr/bin/env python3
+
+import os
+import sys
+import shutil
+import subprocess
+import time
+import glob
+import re
+import json
+from collections import defaultdict
+
+# Cachegrind configuration
+VALGRIND = "valgrind"
+TOOL = "--tool=cachegrind"
+SIM_ON = "--cache-sim=yes"
+I1_CFG = "--I1=32768,8,64" 
+D1_CFG = "--D1=49152,12,64"
+LL_CFG = "--LL=62914560,15,64"
+
+D1_CFG_conflict = "--D1=4096,2,64"
+LL_CFG_conflict = "--LL=33554432,16,64"
+
+# Output file patterns
+VAR_FILE = "varinfo.txt"
+CG_OUTPUT = "cachegrind.out.*"
+CU_D1_OUTPUT = "cacheusage.d1.out.*"
+CU_LL_OUTPUT = "cacheusage.ll.out.*"
+CR_OUTPUT = "cacheusage.cr.out.*"
+
+CMD_CG_ANNOTATE = "cg_annotate"
+CMD_CU_ANNOTATE = "cu_annotate"
+RD_IO = ">"
+CU_ANN_D1_OUTPUT = "cacheusage.d1.txt"
+CU_ANN_LL_OUTPUT = "cacheusage.ll.txt"
+CR_ANN_OUTPUT = "cacheusage.cr.d1.txt"
+CG_ANN_OUTPUT = "cachegrind.txt"
+
+CMD_MOV = "mv"
+CMD_RM = "rm"
+
+CURRENT_DIR = "."
+EXP_DIR = os.path.join(CURRENT_DIR, "cig_sim")
+CR_OUT_DIR = os.path.join(EXP_DIR, "cig")
+
+SIMPLE_DIR=os.path.join(CURRENT_DIR, "Simple")
+HIMENO_DIR=os.path.join(CURRENT_DIR, "Himeno")
+IRSMK_DIR=os.path.join(CURRENT_DIR, "IRSmk")
+CORR_DIR=os.path.join(CURRENT_DIR, "PolyBenchC-4.2.1")
+
+# Binary commands to test
+binary_cmds = {
+#    "conflict":    [os.path.join(SIMPLE_DIR, "bin/conflict"), "-v", VAR_FILE],
+#    "matrix":      [os.path.join(SIMPLE_DIR, "bin/matrix"), "-s", "256", "-b", "16", "-v", VAR_FILE],
+#    "bmt":         [os.path.join(HIMENO_DIR, "bin/bmt.O3"), "-s", "M", "-l", "10", "-v", VAR_FILE],
+#    "bmt_pad":     [os.path.join(HIMENO_DIR, "bin/bmt_pad.O3"), "-s", "M", "-l", "10", "-v", VAR_FILE],
+#    "bmt_aos":     [os.path.join(HIMENO_DIR, "bin/bmt_aos.O3"), "-s", "M", "-l", "10", "-v", VAR_FILE],
+    "irsmk":       [os.path.join(IRSMK_DIR, "bin/irsmk.ori"), "-i", os.path.join(IRSMK_DIR, "Input/irsmk_input"), "-v", VAR_FILE],
+    "irsmk_aos":   [os.path.join(IRSMK_DIR, "bin/irsmk.aos"), "-i", os.path.join(IRSMK_DIR, "Input/irsmk_input"), "-v", VAR_FILE],
+#    "correlation": [os.path.join(CORR_DIR, "bin/correlation.medium"), "-v", VAR_FILE],
+}
+
+def inplace_update_correlation(filepath):
+    with open(filepath, 'r') as f:
+        lines = f.readlines()
+
+    with open(filepath, 'w') as f:
+        for line in lines:
+            # Match pattern: Line: ...:main:<number>
+            match = re.match(r'(Line: .+?):main:(\d+)', line)
+            if match:
+                lineno = int(match.group(2))
+                if 109 <= lineno <= 119:
+                    # Replace ':main:' with ':correlation:'
+                    line = re.sub(r':main:(\d+)', r':correlation:\1', line)
+            f.write(line)
+
+def inplace_update_irsmk(filepath):
+    with open(filepath, 'r') as f:
+        lines = f.readlines()
+
+    with open(filepath, 'w') as f:
+        for line in lines:
+            updated_line = line.replace('rblk_ptr->', '')
+            updated_line = updated_line.replace('rblk_aos1_ptr', 'aos1')
+            updated_line = updated_line.replace('rblk_aos2_ptr', 'aos2')
+            updated_line = updated_line.replace('rblk_aos3_ptr', 'aos3')
+            f.write(updated_line)
+
+def run_cachegrind_extended() -> None:
+    subprocess.run(f"{CMD_RM} {VAR_FILE}", shell=True, capture_output=True, text=True)
+
+    for name, cmd in binary_cmds.items():
+        print(f"\n=== Running CIG Cachegrind Simulation for {name} ===")
+        start = time.time()
+        if name == "conflict":
+            full_cmd = [VALGRIND, TOOL, SIM_ON, I1_CFG, D1_CFG_conflict, LL_CFG_conflict] + cmd
+        else:
+            full_cmd = [VALGRIND, TOOL, SIM_ON, I1_CFG, D1_CFG, LL_CFG] + cmd
+        res = subprocess.run(full_cmd, capture_output=True, text=True)
+        elapsed = time.time() - start
+
+        print("CMD:", res.args)
+        print("STDOUT:", res.stdout)
+        print("STDERR:", res.stderr)
+
+        # Create per-binary log directory
+        target_dir = f"./cig_sim/log.{name}"
+        os.makedirs(target_dir, exist_ok=True)
+
+        # Move varinfo.txt if exists
+        if os.path.exists(VAR_FILE):
+            os.system(f"{CMD_MOV} {VAR_FILE} {target_dir}/")
+
+        # Annotate and move D1 outputs
+        for output in glob.glob(CU_D1_OUTPUT + "*"):
+            if os.path.isfile(output):
+                if os.system(f"{CMD_CU_ANNOTATE} {output} {RD_IO} {CU_ANN_D1_OUTPUT}") == 0:
+                    if os.path.exists(CU_ANN_D1_OUTPUT):
+                        os.system(f"{CMD_MOV} {CU_ANN_D1_OUTPUT} {target_dir}/")
+                os.system(f"{CMD_MOV} {output} {target_dir}/")
+
+        # Annotate and move LL outputs
+        for output in glob.glob(CU_LL_OUTPUT + "*"):
+            if os.path.isfile(output):
+                if os.system(f"{CMD_CU_ANNOTATE} {output} {RD_IO} {CU_ANN_LL_OUTPUT}") == 0:
+                    if os.path.exists(CU_ANN_LL_OUTPUT):
+                        os.system(f"{CMD_MOV} {CU_ANN_LL_OUTPUT} {target_dir}/")
+                os.system(f"{CMD_MOV} {output} {target_dir}/")
+
+        # Annotate and move Cachegrind outputs
+        for output in glob.glob(CG_OUTPUT + "*"):
+            if os.path.isfile(output):
+                if os.system(f"{CMD_CG_ANNOTATE} {output} {RD_IO} {CG_ANN_OUTPUT}") == 0:
+                    if os.path.exists(CG_ANN_OUTPUT):
+                        os.system(f"{CMD_MOV} {CG_ANN_OUTPUT} {target_dir}/")
+                os.system(f"{CMD_MOV} {output} {target_dir}/")
+
+        # Rename and move all cr.out.pid files to CR_OUT_DIR with binary name included
+        for output in glob.glob(CR_OUTPUT + "*"):
+            if os.path.isfile(output):
+                # Extract PID from filename
+                #suffix = output.split(".")[-1]
+                #new_name = f"{CR_OUT_DIR}/cacheusage.cig.{name}.{suffix}"
+                if name == "correlation": #Probably, Cachegrind has a bug in reading the symbol table. We fix it manually
+                    inplace_update_correlation(f"{output}")
+                elif name == "irsmk" or name == "irsmk_aos": #Original variable names are too long. We make them shorter. 
+                    inplace_update_irsmk(f"{output}")
+                new_name = f"{CR_OUT_DIR}/cacheusage.cig.{name}"
+                os.system(f"{CMD_MOV} {output} {new_name}")
+
+if __name__ == "__main__":
+    os.makedirs(CR_OUT_DIR, exist_ok=True)
+    run_cachegrind_extended()

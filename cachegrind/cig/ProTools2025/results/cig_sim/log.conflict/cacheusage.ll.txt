@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /home/uqcjin/bin/valgrind/bin/cu_annotate cacheusage.ll.out.41733
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         4096 B, 64 B, 2-way associative
+LL cache:         33554432 B, 64 B, 16-way associative
+Command:          ./Simple/bin/conflict -v varinfo.txt
+Histogram bins recorded:  Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bins shown:     Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bin sort order: Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#___ Conf#___ Cap#__ Cacheline# 1-words 2-words 3-words 4-words_ 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+         39.0% 921,958 (100.0%)  (71.4%)  (28.6%) (0.0%)          2/2  (0.1%)  (0.1%)  (0.0%)  (57.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (42.7%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#___ Comp#___ Conf#___ Cap#___ Cacheline# 1-words 2-words 3-words 4-words_ 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  file:function
+
+<          38.9% 918,863 (99.7%)  (71.3%)  (28.7%)  (0.0%)          2/2  (0.0%)  (0.0%)  (0.0%)  (57.2%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (42.8%)  /scratch/user/uqcjin/App/example/Simple/src/conflict.c:
+           21.5% 394,575 (42.8%)  (33.2%)  (66.8%)  (0.0%)          4/1  (0.0%)  (0.0%)  (0.0%)  (33.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (66.5%)    main
+          100.0% 524,288 (56.9%)  (99.9%)   (0.0%)  (0.0%)          0/2  (0.0%)  (0.0%)  (0.0%)  (75.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (25.0%)    initialization
+
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#___ Comp#___ Conf#___ Cap#___ Cacheline# 1-words 2-words 3-words 4-words_ 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  function:file
+
+>          21.5% 394,575 (42.8%)  (33.2%)  (66.8%)  (0.0%)          4/1  (0.0%)  (0.0%)  (0.0%)  (33.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (66.5%)  main:/scratch/user/uqcjin/App/example/Simple/src/conflict.c
+
+
+>         100.0% 524,288 (56.9%)  (99.9%)   (0.0%)  (0.0%)          0/2  (0.0%)  (0.0%)  (0.0%)  (75.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (25.0%)  initialization:/scratch/user/uqcjin/App/example/Simple/src/conflict.c
+
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /scratch/user/uqcjin/App/example/Simple/src/conflict.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /scratch/user/uqcjin/App/example/Simple/src/conflict.c
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#___ Comp#___ Conf#___ Cap#__ Cacheline# 1-words 2-words 3-words 4-words_ 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+             0       0  (0.0%)   (0.0%)   (0.0%) (0.0%)            0  (0.0%)  (0.0%)  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    annotated: files known & above threshold & readable, line numbers known
+             0       0  (0.0%)   (0.0%)   (0.0%) (0.0%)            0  (0.0%)  (0.0%)  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    annotated: files known & above threshold & readable, line numbers unknown
+             0       0  (0.0%)   (0.0%)   (0.0%) (0.0%)            0  (0.0%)  (0.0%)  (0.0%)   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  unannotated: files known & above threshold & two or more non-identical
+         38.9% 918,863 (99.7%)  (71.3%)  (28.7%) (0.0%)          2/2  (0.0%)  (0.0%)  (0.0%)  (57.2%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (42.8%)  unannotated: files known & above threshold & unreadable 
+         40.6%   2,056  (0.2%)  (97.0%)   (6.1%) (0.0%)          2/2  (24.7%)  (45.5%)  (5.8%)  (12.0%)  (1.7%)  (4.4%)  (1.2%)  (2.6%)  (0.5%)  (0.5%)  (0.2%)  (0.2%)  (0.1%)  (0.1%)  (0.0%)   (0.7%)  unannotated: files known & below threshold
+         63.8%   1,039  (0.1%)  (99.9%)   (2.6%) (0.0%)          1/1  (54.8%)  (42.2%)  (1.4%)   (1.0%)  (0.2%)  (0.2%)  (0.0%)  (0.2%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  unannotated: files unknown
+

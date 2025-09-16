@@ -1,0 +1,2677 @@
+Running benchmarks on core 16
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 600.499429 time(s): 0.082270 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.248036 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 604.362678
+Score based on Pentium III 600MHz using Fortran 77: 7.295542
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 603.241770 time(s): 0.081896 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.209546 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 605.217595
+Score based on Pentium III 600MHz using Fortran 77: 7.305862
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 604.807404 time(s): 0.081684 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.132088 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 606.945400
+Score based on Pentium III 600MHz using Fortran 77: 7.326719
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 603.425975 time(s): 0.081871 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.139373 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 606.782478
+Score based on Pentium III 600MHz using Fortran 77: 7.324752
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 600.462935 time(s): 0.082275 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.404791 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 600.905732
+Score based on Pentium III 600MHz using Fortran 77: 7.253811
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 567.118048 time(s): 0.725273 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 240.539484 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 569.990148
+Score based on Pentium III 600MHz using Fortran 77: 6.880615
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 558.378290 time(s): 0.736625 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 241.935338 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 566.701570
+Score based on Pentium III 600MHz using Fortran 77: 6.840917
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 561.439196 time(s): 0.732609 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 239.459451 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 572.560972
+Score based on Pentium III 600MHz using Fortran 77: 6.911649
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 557.493566 time(s): 0.737794 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 241.524726 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 567.665010
+Score based on Pentium III 600MHz using Fortran 77: 6.852547
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 561.109856 time(s): 0.733039 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 239.509245 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 572.441936
+Score based on Pentium III 600MHz using Fortran 77: 6.910212
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 550.754876 time(s): 6.093677 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 203.026996 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 551.014132
+Score based on Pentium III 600MHz using Fortran 77: 6.651547
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 549.624091 time(s): 6.106214 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 203.646247 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 549.338599
+Score based on Pentium III 600MHz using Fortran 77: 6.631321
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 547.979134 time(s): 6.124544 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 204.194454 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 547.863773
+Score based on Pentium III 600MHz using Fortran 77: 6.613517
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 546.606136 time(s): 6.139928 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 204.690911 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 546.534985
+Score based on Pentium III 600MHz using Fortran 77: 6.597477
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 553.859709 time(s): 6.059517 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 202.386008 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 552.759280
+Score based on Pentium III 600MHz using Fortran 77: 6.672613
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 432.461011 time(s): 62.696668 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 208.957445 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 432.526096
+Score based on Pentium III 600MHz using Fortran 77: 5.221223
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 439.631900 time(s): 61.674015 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 203.208029 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 444.763666
+Score based on Pentium III 600MHz using Fortran 77: 5.368948
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 434.927583 time(s): 62.341101 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 204.521372 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 441.907597
+Score based on Pentium III 600MHz using Fortran 77: 5.334471
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 435.361652 time(s): 62.278945 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 207.871165 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 434.786364
+Score based on Pentium III 600MHz using Fortran 77: 5.248508
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 435.086365 time(s): 62.318350 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 207.743045 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 435.054507
+Score based on Pentium III 600MHz using Fortran 77: 5.251744
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 697.310976 time(s): 0.070848 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 23.033920 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 714.932413
+Score based on Pentium III 600MHz using Fortran 77: 8.630280
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 701.788283 time(s): 0.070396 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 23.012791 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 715.588822
+Score based on Pentium III 600MHz using Fortran 77: 8.638204
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 707.496821 time(s): 0.069828 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 23.049554 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 714.447490
+Score based on Pentium III 600MHz using Fortran 77: 8.624426
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 702.187276 time(s): 0.070356 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 23.160868 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 711.013767
+Score based on Pentium III 600MHz using Fortran 77: 8.582976
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 710.569974 time(s): 0.069526 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.923567 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 718.374065
+Score based on Pentium III 600MHz using Fortran 77: 8.671826
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 656.060892 time(s): 0.626947 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 201.911010 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 679.037443
+Score based on Pentium III 600MHz using Fortran 77: 8.196975
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 655.384545 time(s): 0.627594 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 200.564332 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 683.596802
+Score based on Pentium III 600MHz using Fortran 77: 8.252014
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 653.203017 time(s): 0.629690 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 201.999220 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 678.740918
+Score based on Pentium III 600MHz using Fortran 77: 8.193396
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 653.357618 time(s): 0.629541 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 201.996021 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 678.751667
+Score based on Pentium III 600MHz using Fortran 77: 8.193526
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 655.549583 time(s): 0.627436 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 200.828399 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 682.697949
+Score based on Pentium III 600MHz using Fortran 77: 8.241163
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 664.204224 time(s): 5.052847 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 167.669938 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 667.208119
+Score based on Pentium III 600MHz using Fortran 77: 8.054178
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 653.948963 time(s): 5.132086 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 168.805389 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 662.720217
+Score based on Pentium III 600MHz using Fortran 77: 8.000003
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 666.276429 time(s): 5.037132 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 168.041080 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 665.734498
+Score based on Pentium III 600MHz using Fortran 77: 8.036389
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 666.283836 time(s): 5.037076 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 167.828927 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 666.576055
+Score based on Pentium III 600MHz using Fortran 77: 8.046548
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 656.831062 time(s): 5.109567 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 168.006678 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 665.870817
+Score based on Pentium III 600MHz using Fortran 77: 8.038035
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 525.420536 time(s): 51.604120 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 172.010786 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 525.429539
+Score based on Pentium III 600MHz using Fortran 77: 6.342703
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 529.269247 time(s): 51.228868 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 171.565542 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 526.793125
+Score based on Pentium III 600MHz using Fortran 77: 6.359164
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 529.957628 time(s): 51.162325 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 170.571619 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 529.862755
+Score based on Pentium III 600MHz using Fortran 77: 6.396219
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 530.431885 time(s): 51.116581 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 170.470902 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 530.175807
+Score based on Pentium III 600MHz using Fortran 77: 6.399998
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 526.271794 time(s): 51.520649 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 171.725128 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 526.303570
+Score based on Pentium III 600MHz using Fortran 77: 6.353254
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 701.608885 time(s): 0.070414 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.759046 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 723.567060
+Score based on Pentium III 600MHz using Fortran 77: 8.734513
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 708.806267 time(s): 0.069699 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.829986 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 721.318708
+Score based on Pentium III 600MHz using Fortran 77: 8.707372
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 709.998103 time(s): 0.069582 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.841084 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 720.968234
+Score based on Pentium III 600MHz using Fortran 77: 8.703141
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 708.887633 time(s): 0.069691 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.878124 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 719.800977
+Score based on Pentium III 600MHz using Fortran 77: 8.689051
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 708.277845 time(s): 0.069751 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 22.844173 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 720.870745
+Score based on Pentium III 600MHz using Fortran 77: 8.701965
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 686.243949 time(s): 0.599372 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 190.814446 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 718.525976
+Score based on Pentium III 600MHz using Fortran 77: 8.673660
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 683.332184 time(s): 0.601926 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 190.808269 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 718.549236
+Score based on Pentium III 600MHz using Fortran 77: 8.673941
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 682.791102 time(s): 0.602403 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 190.909256 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 718.169139
+Score based on Pentium III 600MHz using Fortran 77: 8.669352
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 687.024539 time(s): 0.598691 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 191.838814 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 714.689239
+Score based on Pentium III 600MHz using Fortran 77: 8.627345
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 681.411093 time(s): 0.603623 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 191.440741 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 716.175331
+Score based on Pentium III 600MHz using Fortran 77: 8.645284
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 712.665537 time(s): 4.709253 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 155.511360 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 719.373453
+Score based on Pentium III 600MHz using Fortran 77: 8.683890
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 721.716780 time(s): 4.650193 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 155.082218 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 721.364096
+Score based on Pentium III 600MHz using Fortran 77: 8.707920
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 721.933041 time(s): 4.648800 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 155.006594 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 721.716032
+Score based on Pentium III 600MHz using Fortran 77: 8.712168
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 708.138596 time(s): 4.739358 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 155.071918 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 721.412010
+Score based on Pentium III 600MHz using Fortran 77: 8.708498
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 712.977723 time(s): 4.707191 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 155.001012 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 721.742023
+Score based on Pentium III 600MHz using Fortran 77: 8.712482
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 718.355655 time(s): 37.744346 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 125.866930 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 718.056347
+Score based on Pentium III 600MHz using Fortran 77: 8.667991
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 716.017768 time(s): 37.867586 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 126.445633 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 714.770023
+Score based on Pentium III 600MHz using Fortran 77: 8.628320
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 715.410490 time(s): 37.899730 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 126.386303 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 715.105560
+Score based on Pentium III 600MHz using Fortran 77: 8.632370
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 717.599639 time(s): 37.784111 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 125.869062 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 718.044185
+Score based on Pentium III 600MHz using Fortran 77: 8.667844
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O0', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O0 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 714.048682 time(s): 37.972011 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 126.341708 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 715.357972
+Score based on Pentium III 600MHz using Fortran 77: 8.635417
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5407.518389 time(s): 0.009136 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.631586 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 6257.707709
+Score based on Pentium III 600MHz using Fortran 77: 75.539687
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6038.759076 time(s): 0.008181 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.673642 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 6159.274877
+Score based on Pentium III 600MHz using Fortran 77: 74.351459
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6068.429923 time(s): 0.008141 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.542630 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 6476.638756
+Score based on Pentium III 600MHz using Fortran 77: 78.182506
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6075.146090 time(s): 0.008132 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.639470 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 6239.016166
+Score based on Pentium III 600MHz using Fortran 77: 75.314053
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6068.429923 time(s): 0.008141 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.676077 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 6153.670466
+Score based on Pentium III 600MHz using Fortran 77: 74.283806
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4545.574591 time(s): 0.090487 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 25.328306 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 5413.119061
+Score based on Pentium III 600MHz using Fortran 77: 65.344267
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4574.644185 time(s): 0.089912 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 25.328937 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 5412.984209
+Score based on Pentium III 600MHz using Fortran 77: 65.342639
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4961.944266 time(s): 0.082894 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 25.612705 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 5353.012733
+Score based on Pentium III 600MHz using Fortran 77: 64.618695
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4689.546204 time(s): 0.087709 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 25.610581 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 5353.456683
+Score based on Pentium III 600MHz using Fortran 77: 64.624055
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4485.837456 time(s): 0.091692 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 25.948236 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 5283.794089
+Score based on Pentium III 600MHz using Fortran 77: 63.783125
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3962.761694 time(s): 0.846915 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 27.772272 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 4028.145195
+Score based on Pentium III 600MHz using Fortran 77: 48.625606
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3621.854136 time(s): 0.926631 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 28.159538 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3972.747848
+Score based on Pentium III 600MHz using Fortran 77: 47.956879
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3613.750184 time(s): 0.928709 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 28.076322 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3984.522759
+Score based on Pentium III 600MHz using Fortran 77: 48.099019
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3809.044357 time(s): 0.881093 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 28.042136 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3989.380267
+Score based on Pentium III 600MHz using Fortran 77: 48.157657
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3628.707174 time(s): 0.924881 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 28.132673 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3976.541582
+Score based on Pentium III 600MHz using Fortran 77: 48.002675
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2516.847470 time(s): 10.772947 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 35.969734 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2512.655445
+Score based on Pentium III 600MHz using Fortran 77: 30.331427
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2510.417944 time(s): 10.800538 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 35.975957 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2512.220815
+Score based on Pentium III 600MHz using Fortran 77: 30.326181
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2541.849167 time(s): 10.666984 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 35.619410 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2537.367913
+Score based on Pentium III 600MHz using Fortran 77: 30.629743
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2472.366908 time(s): 10.966764 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 36.273097 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2491.641340
+Score based on Pentium III 600MHz using Fortran 77: 30.077756
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_pad.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_pad.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2531.369373 time(s): 10.711145 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 35.931269 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2515.345283
+Score based on Pentium III 600MHz using Fortran 77: 30.363898
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5733.877437 time(s): 0.008616 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.256464 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 7298.009629
+Score based on Pentium III 600MHz using Fortran 77: 88.097654
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6965.048358 time(s): 0.007093 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.327621 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 7074.904377
+Score based on Pentium III 600MHz using Fortran 77: 85.404447
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6974.881830 time(s): 0.007083 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.187684 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 7527.456433
+Score based on Pentium III 600MHz using Fortran 77: 90.867412
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6920.169211 time(s): 0.007139 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.328685 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 7071.671780
+Score based on Pentium III 600MHz using Fortran 77: 85.365425
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6999.587419 time(s): 0.007058 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 2.125743 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 7746.795356
+Score based on Pentium III 600MHz using Fortran 77: 93.515154
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4928.471045 time(s): 0.083457 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 19.564232 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 7007.948791
+Score based on Pentium III 600MHz using Fortran 77: 84.596195
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4810.425215 time(s): 0.085505 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 19.736821 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 6946.667652
+Score based on Pentium III 600MHz using Fortran 77: 83.856442
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4826.342748 time(s): 0.085223 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 19.699355 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 6959.879448
+Score based on Pentium III 600MHz using Fortran 77: 84.015928
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4851.275674 time(s): 0.084785 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 19.775461 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 6933.094303
+Score based on Pentium III 600MHz using Fortran 77: 83.692592
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4834.909347 time(s): 0.085072 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 19.795102 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 6926.215182
+Score based on Pentium III 600MHz using Fortran 77: 83.609551
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5171.228800 time(s): 0.648999 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 16.489567 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 6784.334846
+Score based on Pentium III 600MHz using Fortran 77: 81.896847
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5172.153254 time(s): 0.648883 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 16.120257 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 6939.761816
+Score based on Pentium III 600MHz using Fortran 77: 83.773078
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5661.302997 time(s): 0.592818 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 15.932779 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 7021.420682
+Score based on Pentium III 600MHz using Fortran 77: 84.758820
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5173.803748 time(s): 0.648676 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 16.686447 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 6704.287857
+Score based on Pentium III 600MHz using Fortran 77: 80.930563
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5175.295680 time(s): 0.648489 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 16.246320 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 6885.912871
+Score based on Pentium III 600MHz using Fortran 77: 83.123043
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6844.728203 time(s): 3.961277 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 13.223640 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 6834.695137
+Score based on Pentium III 600MHz using Fortran 77: 82.504770
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6837.554537 time(s): 3.965433 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 13.202043 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 6845.875900
+Score based on Pentium III 600MHz using Fortran 77: 82.639738
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6642.914116 time(s): 4.081622 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 13.202893 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 6845.435163
+Score based on Pentium III 600MHz using Fortran 77: 82.634418
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6407.883764 time(s): 4.231329 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 13.224236 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 6834.387106
+Score based on Pentium III 600MHz using Fortran 77: 82.501051
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt_aos.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt_aos.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 6818.576376 time(s): 3.976470 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 13.246452 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 6822.924961
+Score based on Pentium III 600MHz using Fortran 77: 82.362687
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5027.280757 time(s): 0.009827 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 3.116489 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 5284.053947
+Score based on Pentium III 600MHz using Fortran 77: 63.786262
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5246.717077 time(s): 0.009416 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 3.112729 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 5290.436784
+Score based on Pentium III 600MHz using Fortran 77: 63.863312
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5230.607517 time(s): 0.009445 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 3.114696 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 5287.095755
+Score based on Pentium III 600MHz using Fortran 77: 63.822981
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5267.976967 time(s): 0.009378 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 3.094757 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 5321.159626
+Score based on Pentium III 600MHz using Fortran 77: 64.234182
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'S', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s S -l 1000
+mimax = 64 mjmax = 64 mkmax = 128
+imax = 63 jmax = 63 kmax =127
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 5214.046227 time(s): 0.009475 3.288628e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 3.110835 sec.
+Loop executed for 1000 times
+Gosa : 4.388119e-04 
+MFLOPS measured : 5293.657812
+Score based on Pentium III 600MHz using Fortran 77: 63.902195
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4223.514514 time(s): 0.097387 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 31.012696 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 4420.935735
+Score based on Pentium III 600MHz using Fortran 77: 53.367162
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4114.717673 time(s): 0.099962 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 31.203476 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 4393.905858
+Score based on Pentium III 600MHz using Fortran 77: 53.040872
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4101.751212 time(s): 0.100278 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 31.171441 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 4398.421491
+Score based on Pentium III 600MHz using Fortran 77: 53.095383
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4124.620525 time(s): 0.099722 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 31.217570 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 4391.922113
+Score based on Pentium III 600MHz using Fortran 77: 53.016926
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'M', '-l', '1000']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s M -l 1000
+mimax = 128 mjmax = 128 mkmax = 256
+imax = 127 jmax = 127 kmax =255
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 4114.594188 time(s): 0.099965 1.733593e-03
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 1000 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 31.115616 sec.
+Loop executed for 1000 times
+Gosa : 7.555019e-04 
+MFLOPS measured : 4406.312766
+Score based on Pentium III 600MHz using Fortran 77: 53.190642
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3470.266320 time(s): 0.967108 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 32.221763 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3471.900156
+Score based on Pentium III 600MHz using Fortran 77: 41.910914
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3446.666242 time(s): 0.973730 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 32.207821 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3473.403059
+Score based on Pentium III 600MHz using Fortran 77: 41.929057
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3435.351839 time(s): 0.976937 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 32.262713 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3467.493388
+Score based on Pentium III 600MHz using Fortran 77: 41.857718
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3457.115021 time(s): 0.970787 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 32.286936 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3464.891930
+Score based on Pentium III 600MHz using Fortran 77: 41.826315
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'L', '-l', '100']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s L -l 100
+mimax = 256 mjmax = 256 mkmax = 512
+imax = 255 jmax = 255 kmax =511
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 3442.678134 time(s): 0.974858 4.882812e-04
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 100 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 32.201549 sec.
+Loop executed for 100 times
+Gosa : 4.882812e-04 
+MFLOPS measured : 3474.079585
+Score based on Pentium III 600MHz using Fortran 77: 41.937223
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2100.498307 time(s): 12.908301 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 43.128171 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2095.603544
+Score based on Pentium III 600MHz using Fortran 77: 25.297001
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2116.988886 time(s): 12.807750 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 42.811445 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2111.107158
+Score based on Pentium III 600MHz using Fortran 77: 25.484152
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2102.140016 time(s): 12.898220 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 43.008982 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2101.411003
+Score based on Pentium III 600MHz using Fortran 77: 25.367105
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2091.810883 time(s): 12.961910 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 43.225025 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2090.907940
+Score based on Pentium III 600MHz using Fortran 77: 25.240318
+
+
+['taskset', '-c', '16', './Himeno/bin/bmt.O3', '-s', 'XL', '-l', '10']
+taskset -c 16 ./Himeno/bin/bmt.O3 -s XL -l 10
+mimax = 512 mjmax = 512 mkmax = 1024
+imax = 511 jmax = 511 kmax =1023
+ Start rehearsal measurement process.
+ Measure the performance in 3 times.
+
+ MFLOPS: 2125.120018 time(s): 12.758745 6.103516e-05
+
+ Now, start the actual measurement process.
+ The loop will be excuted in 10 times
+ This will take about one minute.
+ Wait for a while
+
+cpu : 42.585415 sec.
+Loop executed for 10 times
+Gosa : 6.103516e-05 
+MFLOPS measured : 2122.312252
+Score based on Pentium III 600MHz using Fortran 77: 25.619414
+
+
+
+=== Optimization: O0 ===
+bmt
+  S:
+    MFLOPS: 604.36, Time: 27.363s
+    MFLOPS: 605.22, Time: 27.322s
+    MFLOPS: 606.95, Time: 27.244s
+    MFLOPS: 606.78, Time: 27.251s
+    MFLOPS: 600.91, Time: 27.517s
+  M:
+    MFLOPS: 569.99, Time: 241.453s
+    MFLOPS: 566.70, Time: 242.861s
+    MFLOPS: 572.56, Time: 240.381s
+    MFLOPS: 567.67, Time: 242.452s
+    MFLOPS: 572.44, Time: 240.431s
+  L:
+    MFLOPS: 551.01, Time: 210.551s
+    MFLOPS: 549.34, Time: 211.157s
+    MFLOPS: 547.86, Time: 211.754s
+    MFLOPS: 546.53, Time: 212.264s
+    MFLOPS: 552.76, Time: 209.881s
+  XL:
+    MFLOPS: 432.53, Time: 282.732s
+    MFLOPS: 444.76, Time: 275.843s
+    MFLOPS: 441.91, Time: 277.868s
+    MFLOPS: 434.79, Time: 281.128s
+    MFLOPS: 435.05, Time: 281.077s
+bmt_pad
+  S:
+    MFLOPS: 714.93, Time: 23.143s
+    MFLOPS: 715.59, Time: 23.120s
+    MFLOPS: 714.45, Time: 23.153s
+    MFLOPS: 711.01, Time: 23.264s
+    MFLOPS: 718.37, Time: 23.026s
+  M:
+    MFLOPS: 679.04, Time: 202.731s
+    MFLOPS: 683.60, Time: 201.384s
+    MFLOPS: 678.74, Time: 202.822s
+    MFLOPS: 678.75, Time: 202.818s
+    MFLOPS: 682.70, Time: 201.649s
+  L:
+    MFLOPS: 667.21, Time: 174.192s
+    MFLOPS: 662.72, Time: 175.377s
+    MFLOPS: 665.73, Time: 174.508s
+    MFLOPS: 666.58, Time: 174.336s
+    MFLOPS: 665.87, Time: 174.588s
+  XL:
+    MFLOPS: 525.43, Time: 234.634s
+    MFLOPS: 526.79, Time: 234.111s
+    MFLOPS: 529.86, Time: 232.732s
+    MFLOPS: 530.18, Time: 232.690s
+    MFLOPS: 526.30, Time: 234.336s
+bmt_aos
+  S:
+    MFLOPS: 723.57, Time: 22.855s
+    MFLOPS: 721.32, Time: 22.923s
+    MFLOPS: 720.97, Time: 22.933s
+    MFLOPS: 719.80, Time: 22.971s
+    MFLOPS: 720.87, Time: 22.936s
+  M:
+    MFLOPS: 718.53, Time: 191.552s
+    MFLOPS: 718.55, Time: 191.550s
+    MFLOPS: 718.17, Time: 191.651s
+    MFLOPS: 714.69, Time: 192.576s
+    MFLOPS: 716.18, Time: 192.183s
+  L:
+    MFLOPS: 719.37, Time: 161.261s
+    MFLOPS: 721.36, Time: 160.777s
+    MFLOPS: 721.72, Time: 160.660s
+    MFLOPS: 721.41, Time: 160.869s
+    MFLOPS: 721.74, Time: 160.761s
+  XL:
+    MFLOPS: 718.06, Time: 171.536s
+    MFLOPS: 714.77, Time: 172.187s
+    MFLOPS: 715.11, Time: 172.190s
+    MFLOPS: 718.04, Time: 171.629s
+    MFLOPS: 715.36, Time: 172.219s
+
+=== Optimization: O3 ===
+bmt_pad
+  S:
+    MFLOPS: 6257.71, Time: 2.659s
+    MFLOPS: 6159.27, Time: 2.696s
+    MFLOPS: 6476.64, Time: 2.565s
+    MFLOPS: 6239.02, Time: 2.662s
+    MFLOPS: 6153.67, Time: 2.698s
+  M:
+    MFLOPS: 5413.12, Time: 25.466s
+    MFLOPS: 5412.98, Time: 25.466s
+    MFLOPS: 5353.01, Time: 25.744s
+    MFLOPS: 5353.46, Time: 25.747s
+    MFLOPS: 5283.79, Time: 26.088s
+  L:
+    MFLOPS: 4028.15, Time: 28.913s
+    MFLOPS: 3972.75, Time: 29.382s
+    MFLOPS: 3984.52, Time: 29.300s
+    MFLOPS: 3989.38, Time: 29.218s
+    MFLOPS: 3976.54, Time: 29.353s
+  XL:
+    MFLOPS: 2512.66, Time: 48.989s
+    MFLOPS: 2512.22, Time: 48.908s
+    MFLOPS: 2537.37, Time: 48.322s
+    MFLOPS: 2491.64, Time: 49.500s
+    MFLOPS: 2515.35, Time: 48.674s
+bmt_aos
+  S:
+    MFLOPS: 7298.01, Time: 2.279s
+    MFLOPS: 7074.90, Time: 2.345s
+    MFLOPS: 7527.46, Time: 2.205s
+    MFLOPS: 7071.67, Time: 2.346s
+    MFLOPS: 7746.80, Time: 2.143s
+  M:
+    MFLOPS: 7007.95, Time: 19.689s
+    MFLOPS: 6946.67, Time: 19.866s
+    MFLOPS: 6959.88, Time: 19.828s
+    MFLOPS: 6933.09, Time: 19.904s
+    MFLOPS: 6926.22, Time: 19.923s
+  L:
+    MFLOPS: 6784.33, Time: 17.422s
+    MFLOPS: 6939.76, Time: 17.053s
+    MFLOPS: 7021.42, Time: 16.809s
+    MFLOPS: 6704.29, Time: 17.619s
+    MFLOPS: 6885.91, Time: 17.179s
+  XL:
+    MFLOPS: 6834.70, Time: 19.227s
+    MFLOPS: 6845.88, Time: 19.318s
+    MFLOPS: 6845.44, Time: 19.476s
+    MFLOPS: 6834.39, Time: 19.648s
+    MFLOPS: 6822.92, Time: 19.275s
+bmt
+  S:
+    MFLOPS: 5284.05, Time: 3.141s
+    MFLOPS: 5290.44, Time: 3.134s
+    MFLOPS: 5287.10, Time: 3.135s
+    MFLOPS: 5321.16, Time: 3.115s
+    MFLOPS: 5293.66, Time: 3.132s
+  M:
+    MFLOPS: 4420.94, Time: 31.153s
+    MFLOPS: 4393.91, Time: 31.348s
+    MFLOPS: 4398.42, Time: 31.316s
+    MFLOPS: 4391.92, Time: 31.361s
+    MFLOPS: 4406.31, Time: 31.260s
+  L:
+    MFLOPS: 3471.90, Time: 33.442s
+    MFLOPS: 3473.40, Time: 33.428s
+    MFLOPS: 3467.49, Time: 33.485s
+    MFLOPS: 3464.89, Time: 33.541s
+    MFLOPS: 3474.08, Time: 33.459s
+  XL:
+    MFLOPS: 2095.60, Time: 58.040s
+    MFLOPS: 2111.11, Time: 57.627s
+    MFLOPS: 2101.41, Time: 57.953s
+    MFLOPS: 2090.91, Time: 58.399s
+    MFLOPS: 2122.31, Time: 57.340s
+[+] Written: perf_himeno_O0.json
+[+] Written: perf_himeno_O3.json

@@ -1,0 +1,107 @@
+#! /usr/bin/env python3
+
+import sys
+import json
+from collections import defaultdict
+import re
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
+import numpy as np
+import pandas as pd
+
+def load_json(json_file) -> None:
+    with open(json_file) as jf:
+        data = json.load(jf)
+
+    perf_results = {
+        exe: {size: [tuple(run) for run in runs] for size, runs in size_dict.items()}
+        for exe, size_dict in data.items()
+    }
+
+    return perf_results
+
+def print_results(results) -> None:
+    for exe, size_dict in results.items():
+        print(exe)
+        for label, runs in size_dict.items():
+            print(label)
+            for run_idx, (mflops, elapsed) in enumerate(runs, start=1):
+                print(mflops, elapsed)
+
+def plot_results_whole(results, optimization, output_pdf: str = None) -> None:
+    rows = []
+    for exe, size_dict in results.items():
+        for size, runs in size_dict.items():
+            for mflops, _ in runs:
+                rows.append({"exe": exe, "size": size, "MFLOPS": mflops})
+    df = pd.DataFrame(rows)
+ 
+    sizes = sorted(df["size"].unique())
+    exes = sorted(df["exe"].unique())
+  
+    colors = ["r", "g", "b", "y", "k"]
+
+    label_map = {"S": "Small", "M": "Medium", "L": "Large", "XL": "Extra Large"}
+    df["size"] = df["size"].map(label_map)
+
+    ordered_sizes = ["Small", "Medium", "Large", "Extra Large"]
+    base = np.arange(len(ordered_sizes))
+    width = 0.2
+
+    plt.figure()
+    for i, exe in enumerate(exes):
+        means = []
+        stds = []
+
+        for s in ordered_sizes:
+           values = df[(df["exe"] == exe) & (df["size"] == s)]["MFLOPS"].values
+           means.append(np.mean(values))
+           stds.append(np.std(values))
+        positions = base + (i - (len(exes)-1)/2) * width
+
+        plt.errorbar(positions, means, yerr=stds, fmt='o', color=colors[i], label=exe, capsize=5)
+
+    plt.xticks(base, ordered_sizes)
+    #plt.yscale('log')
+    if optimization == -1:
+        plt.title(f"Performance Comparison for Himeno")
+    else:
+        plt.title(f"Performance Comparison for Himeno (O{optimization})")
+    plt.xlabel("Problem Size")
+    plt.ylabel("MFLOPS")
+    plt.legend(handles=[
+        plt.Line2D([], [], color=colors[i], marker='s', linestyle='None', label=exe)
+        for i, exe in enumerate(exes)
+    ])
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
+
+    if output_pdf:
+        with PdfPages(output_pdf) as pdf:
+            pdf.savefig()
+            plt.close()
+    else:
+        plt.show()
+
+def print_usage() -> None:
+    print("Usage: ", sys.argv[0], "input_json_file", "output_pdf_file")
+
+if __name__ == "__main__":
+    n = len(sys.argv)
+
+    if n < 2:
+        print_usage()
+    else:
+        perf_results = load_json(sys.argv[1])
+        #print_results(perf_results)
+        parts = sys.argv[1].split('.')
+        optimization = -1
+        for seg in parts:
+            m = re.search(r'O(\d+)', seg)
+            if m:
+               optimization = int(m.group(1))
+               break
+        
+        if n > 2:
+           plot_results_whole(perf_results, optimization, sys.argv[2])
+        else:
+           plot_results_whole(perf_results, optimization)

@@ -1,0 +1,69 @@
+desc SUM: access# miss# compulsory# conflict# capacity#
+desc CR: in_var out_var total# compulsory# conflict# capacity#
+desc CU: var access# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:initialization:26
+SUM: 16385 4096 4096 0 0
+CR: A A 3596 3596 0 0
+CR: A B 116 116 0 0
+CU: A 10788 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3596
+CU: B 348 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 116
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:initialization:27
+SUM: 16385 4096 4096 0 0
+CR: B A 118 118 0 0
+CR: B B 3596 3596 0 0
+CU: A 354 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 118
+CU: B 10788 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3596
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:multiply_blocked:79
+SUM: 33554438 77297 0 7664 69633
+CR: A A 256 0 16 240
+CR: A B 6280 0 5920 360
+CR: A C_d 4968 0 1728 3240
+CR: B A 6070 0 0 6070
+CR: B B 55853 0 0 55853
+CR: B C_d 3357 0 0 3357
+CU: A 8983114 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6326
+CU: B 15843915 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 62133
+CU: C_d 746331 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8325
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:multiply_blocked:81
+SUM: 1048577 13120 0 9024 4096
+CR: C_d A 5162 0 1664 3498
+CR: C_d B 3147 0 2832 315
+CR: C_d C_d 4542 0 4512 30
+CU: A 7282902 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5162
+CU: B 802485 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3147
+CU: C_d 257346 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4542
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:multiply_simple:56
+SUM: 50397186 16853505 0 15796736 1056769
+CR: A B 72176 0 68096 4080
+CR: B A 72176 0 61440 10736
+CR: B B 16699969 0 15667200 1032769
+CR: B C 4080 0 0 4080
+CR: C B 4080 0 0 4080
+CU: A 16674272 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72176
+CU: B 0 16776225 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: C 16772880 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4080
+Line: /scratch/user/uqcjin/App/example/Simple/src/matrix.c:verify_results:97
+SUM: 262144 8193 0 0 8193
+CR: C A 131 0 0 131
+CR: C B 129 0 0 129
+CR: C C 3654 0 0 3654
+CR: C C_d 136 0 0 136
+CR: C_d A 121 0 0 121
+CR: C_d B 127 0 0 127
+CR: C_d C 58 0 0 58
+CR: C_d C_d 3780 0 0 3780
+CU: A 494340 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 252
+CU: B 65280 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 256
+CU: C 55680 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3712
+CU: C_d 81811 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3917
+Line: ???:__memset_avx2_unaligned_erms:0
+SUM: 524292 8196 8192 0 4
+CR: C A 327 327 0 0
+CR: C B 359 359 0 0
+CR: C C 3328 3328 0 0
+CR: C_d C 762 762 0 0
+CR: C_d C_d 3328 3328 0 0
+CU: A 981 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 327
+CU: B 1080 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 360
+CU: C 257796 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4092
+CU: C_d 209727 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3329

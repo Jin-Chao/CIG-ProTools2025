@@ -1,0 +1,984 @@
+desc: I1 cache:         32768 B, 64 B, 8-way associative
+desc: D1 cache:         49152 B, 64 B, 12-way associative
+desc: LL cache:         62914560 B, 64 B, 15-way associative
+cmd: ./Himeno/bin/bmt_pad.O3 -s M -l 10 -v varinfo.txt
+bins: Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/alloc.c
+fn=gomp_aligned_alloc
+fn=gomp_malloc
+fn=gomp_malloc_cleared
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/barrier.c
+fn=GOMP_barrier
+35 48 26 0 26 0 24  0  24  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/bar.c
+fn=gomp_team_barrier_wait
+fn=gomp_team_barrier_wait_end
+92 26 13 0 13 0 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_team_barrier_wait_final
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/bar.h
+fn=gomp_new_team
+58 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+59 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_team_barrier_wait
+91 24 13 0 13 0 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+98 24 13 0 13 0 12  11  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_team_barrier_wait_final
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/mutex.h
+fn=GOMP_critical_end
+fn=GOMP_critical_start
+55 13 13 0 13 0 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=goacc_host_init
+fn=goacc_profiling_initialize
+fn=goacc_register
+fn=goacc_runtime_initialize
+fn=gomp_init_work_share
+43 2 2 1 1 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_new_team
+43 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/proc.c
+fn=gomp_init_num_threads
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/ptrlock.h
+fn=gomp_init_work_share
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/sem.h
+fn=gomp_new_team
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h
+fn=gomp_team_barrier_wait_end
+52 26 13 0 13 0 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/posix/pool.h
+fn=gomp_new_team
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/critical.c
+fn=GOMP_critical_end
+fn=GOMP_critical_start
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/env.c
+fn=add_initial_icv_to_list
+1971 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=initialize_env
+2053 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=parse_boolean
+fn=parse_int_1
+fn=parse_unsigned_long_1
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/icv.c
+fn=omp_set_num_threads
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/libgomp.h
+fn=GOMP_parallel
+985 4 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_end_task
+1113 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_resolve_num_threads
+fn=omp_set_num_threads
+985 2 2 0 2 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/oacc-host.c
+fn=goacc_host_init
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/oacc-init.c
+fn=goacc_register
+fn=goacc_runtime_deinitialize
+fn=goacc_runtime_initialize
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/oacc-profiling.c
+fn=goacc_profiling_initialize
+105 3 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/parallel.c
+fn=GOMP_parallel
+141 2 2 0 2 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_resolve_num_threads
+52 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+56 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=omp_get_num_threads
+280 11 11 0 11 0 11  11  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=omp_get_thread_num
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/priority_queue.h
+fn=gomp_init_task
+161 3 3 1 2 0 3  0  2  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_new_team
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/task.c
+fn=gomp_end_task
+fn=gomp_init_task
+77 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+84 1 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+87 3 3 1 2 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/team.c
+fn=gomp_new_icv
+1121 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_new_team
+157 1 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+193 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+198 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+206 12 12 6 6 0 12  0  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+207 2 2 1 1 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+211 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_team_end
+974 4 4 0 4 0 2  0  1  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+fn=gomp_team_start
+344 2 2 0 2 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=initialize_team
+fn=team_destructor
+fl=/dev/shm/GCCcore/13.3.0/system-system/gcc-13.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/work.c
+fn=gomp_fini_work_share
+146 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=gomp_init_work_share
+134 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_pad.c
+fn=jacobi
+375 2 1 0 0 1 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=jacobi._omp_fn.0
+378 4 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+390 81 13 0 2 11 11  11  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+391 6817356 6608946 0 6608946 0 6611398  6610188  838  0  0  0  0  372  0  0  0  0  0  0  0  0  0
+392 3356262 3303847 0 3303847 0 3305056  3305055  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+393 6606054 3303861 0 3303861 0 3305070  3305070  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+395 6632275 5880007 0 5880007 0 5880611  5048863  864  0  830512  372  0  0  0  0  0  0  0  0  0  0  0
+396 3328481 26431 0 26419 12 26429  26416  13  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+398 6630637 3323517 0 3306249 17268 3311284  3311271  13  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+401 9909900 3322864 0 3322864 0 3317902  3312322  0  0  5580  0  0  0  0  0  0  0  0  0  0  0  0
+403 3354624 3239781 0 3239781 0 3237015  3237015  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+404 3303846 3239595 0 3239595 0 3237999  3237999  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+405 3303846 3239401 0 3239401 0 3238767  3238767  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+408 6609330 6607693 0 6607693 0 6610167  6610166  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+412 3354637 3282128 0 2823274 458854 3283339  2445903  384  0  836680  0  372  0  0  0  0  0  0  0  0  0  0
+414 13 13 0 13 0 12  0  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+417 13 13 0 0 13 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+419 6607692 4935476 0 4935476 0 4949040  1128  1128  0  4944108  396  1140  1140  0  0  0  0  0  0  0  0  0
+423 13 13 0 13 0 12  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=main
+206 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+225 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+226 1 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+318 3 2 2 0 0 2  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0
+319 5 5 5 0 0 5  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=mat_set
+349 1677 6 0 6 0 5  1  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+352 3407885 3407885 3407885 0 0 3407885  7  0  6  3407763  102  0  7  0  0  0  0  0  0  0  0  0
+fn=mat_set_init
+364 262272 262144 262144 0 0 262144  0  0  0  262144  0  0  0  0  0  0  0  0  0  0  0  0
+fn=second
+448 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=set_param
+294 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/scratch/user/uqcjin/App/examples/Himeno/src/../../Util/util.c
+fn=varinfo_file_close
+fn=varinfo_file_open
+fn=varinfo_file_print
+fl=/usr/include/stdlib.h
+fn=main
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../elf/dl-sysdep.c
+fn=_dl_sysdep_start
+88 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+113 29 29 29 0 0 29  0  28  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+117 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+119 2 2 2 0 0 2  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+120 3 3 3 0 0 3  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+126 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+129 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+153 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+156 1 1 1 0 0 1  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0
+fn=_dl_sysdep_start_cleanup
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../elf/dl-tls.c
+fn=_dl_add_to_slotinfo
+fn=_dl_allocate_tls_init
+fn=_dl_allocate_tls_storage
+477 36 36 36 0 0 36  0  30  3  2  0  1  0  0  0  0  0  0  0  0  0  0
+496 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_assign_tls_modid
+fn=_dl_count_modids
+fn=_dl_determine_tlsoffset
+288 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_get_tls_static_info
+420 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_tls_initial_modid_limit_setup
+fn=_dl_tls_static_surplus_init
+fn=allocate_dtv
+401 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../include/rtld-malloc.h
+fn=_dl_allocate_tls_storage
+fn=_dl_check_map_versions
+fn=_dl_important_hwcaps
+fn=_dl_init_paths
+fn=_dl_map_object_deps
+fn=_dl_new_object
+fn=allocate_dtv
+fn=decompose_rpath.isra.7
+fn=expand_dynamic_string_token
+fn=fillin_rpath
+fn=init_tls
+fn=open_path
+fn=open_verify.constprop.9
+fn=rtld_calloc
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../include/scratch_buffer.h
+fn=_dl_map_object_deps
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../misc/sbrk.c
+fn=sbrk
+40 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/generic/dl-cache.h
+fn=_dl_load_cache_lookup
+fn=search_cache
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/generic/dl-hash.h
+fn=__rtld_malloc_init_real
+45 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/generic/ldsodefs.h
+fn=_dl_relocate_object
+fn=do_lookup_x
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/posix/dl-fileid.h
+fn=_dl_map_object_from_fd
+47 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/unix/sysv/linux/dl-osinfo.h
+fn=dl_main
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/unix/sysv/linux/dl-sysdep.c
+fn=_dl_discover_osversion
+88 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+110 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_sysdep_start
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/unix/sysv/linux/x86/cpu-features.c
+fn=init_cpu_features.constprop.0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/unix/sysv/linux/x86_64/brk.c
+fn=brk
+31 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/cpu-features.c
+fn=get_common_indices.constprop.1
+328 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+351 2 2 2 0 0 2  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+359 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=init_cpu_features.constprop.0
+421 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=update_usable.constprop.2
+83 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+229 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/dl-cet.c
+fn=_dl_cet_check
+fn=dl_cet_check
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/dl-get-cpu-features.c
+fn=__x86_cpu_features
+fn=_dl_x86_init_cpu_features
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/dl-hwcap.h
+fn=_dl_important_hwcaps
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/dl-procinfo.h
+fn=search_cache
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86/dl-prop.h
+fn=_dl_process_pt_note
+71 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+153 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+170 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=dl_main
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86_64/dl-hwcaps-subdirs.c
+fn=_dl_hwcaps_subdirs_active
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86_64/dl-irel.h
+fn=_dl_fixup
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86_64/dl-machine.h
+fn=_dl_fixup
+fn=_dl_relocate_object
+86 2 2 2 0 0 2  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+306 153 129 129 0 0 129  78  31  18  2  0  0  0  0  0  0  0  0  0  0  0  0
+331 3 3 3 0 0 3  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+436 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+445 11 11 11 0 0 11  0  2  0  7  0  2  0  0  0  0  0  0  0  0  0  0
+455 58 56 56 0 0 56  0  44  1  9  0  2  0  0  0  0  0  0  0  0  0  0
+499 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+514 2 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+533 171 171 171 0 0 171  171  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+539 433 426 426 0 0 426  0  401  9  15  1  0  0  0  0  0  0  0  0  0  0  0
+557 16 16 16 0 0 16  0  7  0  8  0  1  0  0  0  0  0  0  0  0  0  0
+fn=_dl_start
+58 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+307 5 5 5 0 0 5  2  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+331 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+538 6 6 6 0 0 6  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+539 35 35 35 0 0 35  0  14  14  5  2  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_sysdep_start
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86_64/dl-runtime.h
+fn=_dl_fixup
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/../sysdeps/x86_64/dl-trampoline.h
+fn=_dl_runtime_resolve_xsave
+87 4 3 0 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+93 4 3 0 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+107 4 4 1 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+117 24 21 1 20 0 17  0  2  0  15  0  0  0  0  0  0  0  0  0  0  0  0
+126 4 3 0 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/./dl-hwcaps.h
+fn=_dl_important_hwcaps
+fn=copy_hwcaps.isra.1
+fn=update_hwcaps_counts
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/./dl-load.h
+fn=_dl_map_object_from_fd
+93 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/./dl-main.h
+fn=dl_main
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/./dl-map-segments.h
+fn=_dl_map_object_from_fd
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/./dl-sym-post.h
+fn=lookup_malloc_symbol
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-audit.c
+fn=_dl_audit_activity_map
+fn=_dl_audit_activity_nsid
+fn=_dl_audit_objclose
+fn=_dl_audit_objopen
+fn=_dl_audit_preinit
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-cache.c
+fn=_dl_cache_libcmp
+361 28 28 28 0 0 28  28  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_load_cache_lookup
+411 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+423 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_unload_cache
+fn=search_cache
+222 19 19 19 0 0 19  19  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-call-libc-early-init.c
+fn=_dl_call_libc_early_init
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-debug.c
+fn=_dl_debug_initialize
+fn=_dl_debug_state
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-deps.c
+fn=_dl_map_object_deps
+214 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+500 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=openaux
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-environ.c
+fn=_dl_next_ld_env_entry
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-error-skeleton.c
+fn=_dl_catch_error
+fn=_dl_catch_exception
+175 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+199 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+206 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_receive_error
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-fini.c
+fn=_dl_fini
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-hwcaps.c
+fn=_dl_important_hwcaps
+172 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+173 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+201 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+211 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+254 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+339 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=copy_hwcaps.isra.1
+77 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+79 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+80 2 2 2 0 0 2  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=update_hwcaps_counts
+52 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-hwcaps_split.c
+fn=_dl_hwcaps_contains
+fn=_dl_hwcaps_split
+fn=_dl_hwcaps_split.part.1
+34 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_hwcaps_split_masked
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-init.c
+fn=_dl_init
+fn=call_init.part.0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-load.c
+fn=_dl_dst_count
+236 2 2 2 0 0 2  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_dst_substitute
+fn=_dl_init_paths
+702 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+740 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+744 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+750 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+809 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_map_object
+1931 4 4 4 0 0 4  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1933 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1940 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1950 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1998 2 2 2 0 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_map_object_from_fd
+877 2 2 2 0 0 2  1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+887 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+994 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1045 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1075 4 4 4 0 0 4  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1077 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1079 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1106 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1107 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1115 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1139 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1140 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1293 3 3 3 0 0 3  0  0  1  2  0  0  0  0  0  0  0  0  0  0  0  0
+1374 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1376 4 4 4 0 0 4  2  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0
+fn=cache_rpath.part.8
+fn=decompose_rpath.isra.7
+604 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=expand_dynamic_string_token
+fn=fillin_rpath
+452 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+456 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+520 11 11 11 0 0 11  0  11  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+522 3 3 3 0 0 3  1  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0
+547 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=is_dst
+fn=open_path
+1779 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1780 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1791 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1810 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1850 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=open_verify.constprop.9
+1481 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1539 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1553 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1586 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1658 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1664 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1688 15 15 15 0 0 15  15  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-lookup-direct.c
+fn=_dl_lookup_direct
+fn=check_match
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-lookup.c
+fn=_dl_lookup_symbol_x
+593 175 164 155 9 0 161  139  2  8  9  3  0  0  0  0  0  0  0  0  0  0  0
+852 16 10 0 10 0 7  3  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+858 5 3 0 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+865 11 4 0 4 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+872 5 3 0 3 0 3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+955 13 5 0 5 0 4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_setup_hash
+979 7 7 7 0 0 7  2  0  4  0  1  0  0  0  0  0  0  0  0  0  0  0
+981 2 2 2 0 0 2  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=check_match
+69 156 124 115 9 0 122  48  44  29  1  0  0  0  0  0  0  0  0  0  0  0  0
+72 23 19 19 0 0 19  0  19  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+85 11 6 0 6 0 6  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+92 10 6 0 6 0 4  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+114 71 43 38 5 0 41  31  9  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+115 26 10 0 10 0 7  6  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+145 2 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=do_lookup_x
+362 10 5 0 5 0 5  0  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+363 5 3 0 3 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+373 29 18 0 18 0 11  0  11  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+401 22 13 0 13 0 8  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+405 4 3 0 3 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+411 11 6 0 6 0 4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+419 41 20 0 20 0 12  0  12  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+420 8 4 0 4 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+426 108 67 43 24 0 60  0  37  0  22  0  1  0  0  0  0  0  0  0  0  0  0
+437 131 100 93 7 0 98  36  43  18  1  0  0  0  0  0  0  0  0  0  0  0  0
+444 167 134 127 7 0 132  36  83  13  0  0  0  0  0  0  0  0  0  0  0  0  0
+447 6 4 0 4 0 4  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-minimal.c
+fn=__rtld_malloc_init_real
+fn=__rtld_malloc_init_stubs
+56 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=lookup_malloc_symbol
+fn=rtld_calloc
+fn=rtld_free
+fn=rtld_malloc
+fn=strsep
+344 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+358 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-misc.c
+fn=_dl_name_match_p
+341 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_sysdep_read_whole_file
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-object.c
+fn=_dl_add_to_namespace_list
+47 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_new_object
+59 4 4 4 0 0 4  0  2  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+98 4 4 4 0 0 4  0  3  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+99 6 6 6 0 0 6  0  1  2  2  1  0  0  0  0  0  0  0  0  0  0  0
+103 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+104 3 3 3 0 0 3  0  1  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+127 7 7 7 0 0 7  6  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+131 6 6 6 0 0 6  5  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+141 4 4 4 0 0 4  0  3  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+149 2 2 2 0 0 2  0  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+150 6 6 6 0 0 6  0  0  0  6  0  0  0  0  0  0  0  0  0  0  0  0
+155 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+157 3 3 3 0 0 3  0  2  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+259 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-open.c
+fn=_dl_find_dso_for_object
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-reloc.c
+fn=_dl_protect_relro
+fn=_dl_relocate_object
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-runtime.c
+fn=_dl_fixup
+48 8 6 0 6 0 4  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+53 7 5 0 5 0 3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+54 7 5 0 5 0 3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+55 27 10 0 10 0 8  0  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+57 6 5 0 5 0 4  0  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+66 28 25 18 7 0 23  23  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+68 10 6 0 6 0 4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+70 7 5 0 5 0 3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+74 17 11 0 11 0 7  4  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+75 4 3 0 3 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+84 2 2 0 2 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+94 10 8 0 8 0 5  0  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+108 2 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+158 4 3 0 3 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-sort-maps.c
+fn=_dl_sort_maps
+fn=_dl_sort_maps_init
+305 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=dfs_traversal
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-tunables.c
+fn=__GI___tunables_init
+75 153 153 153 0 0 153  13  17  4  7  9  19  19  19  16  8  4  8  6  3  1  0
+84 1 1 1 0 0 1  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0
+289 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+fn=__tunable_get_val
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-tunables.h
+fn=__GI___tunables_init
+124 8 8 8 0 0 8  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/dl-version.c
+fn=_dl_check_all_versions
+fn=_dl_check_map_versions
+95 18 17 17 0 0 17  15  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+109 10 10 10 0 0 10  10  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+111 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+121 8 8 8 0 0 8  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+185 4 4 4 0 0 4  3  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+214 2 2 2 0 0 2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+220 6 6 6 0 0 6  3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0
+222 2 2 2 0 0 2  1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+257 11 11 11 0 0 11  11  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+260 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+305 9 9 9 0 0 9  1  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+306 2 2 2 0 0 2  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0
+307 3 3 3 0 0 3  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0
+342 23 23 23 0 0 23  19  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+344 9 9 9 0 0 9  0  5  3  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/do-rel.h
+fn=_dl_relocate_object
+65 48 48 48 0 0 48  0  40  0  8  0  0  0  0  0  0  0  0  0  0  0  0
+110 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+114 174 171 171 0 0 171  0  171  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+128 133 123 123 0 0 123  36  86  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+177 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_start
+114 8 8 8 0 0 8  0  6  1  1  0  0  0  0  0  0  0  0  0  0  0  0
+128 2 2 2 0 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/get-dynamic-info.h
+fn=_dl_map_object_from_fd
+48 38 38 38 0 0 38  0  10  0  24  0  4  0  0  0  0  0  0  0  0  0  0
+64 30 30 30 0 0 30  0  14  0  14  0  2  0  0  0  0  0  0  0  0  0  0
+112 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+154 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_start
+48 6 6 6 0 0 6  0  0  1  4  0  1  0  0  0  0  0  0  0  0  0  0
+64 7 7 7 0 0 7  0  1  0  6  0  0  0  0  0  0  0  0  0  0  0  0
+73 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=dl_main
+48 7 7 7 0 0 7  0  2  0  4  0  1  0  0  0  0  0  0  0  0  0  0
+64 6 6 6 0 0 6  0  2  0  3  0  1  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/rtld.c
+fn=_dl_start
+71 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+473 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+548 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+566 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+579 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=dl_main
+192 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+219 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1193 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+1207 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1211 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+1496 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+1533 4 4 4 0 0 4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1552 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1588 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1593 3 3 3 0 0 3  0  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1628 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+1641 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+1669 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1765 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1771 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+1777 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1780 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+1785 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+2683 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+2691 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+2693 1 1 1 0 0 1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+2706 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=do_preload
+fn=dso_name_valid_for_suid
+fn=handle_preload_list
+898 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=init_tls
+749 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+770 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=map_doit
+fn=rtld_lock_default_lock_recursive
+851 2 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=rtld_lock_default_unlock_recursive
+fn=version_check_doit
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/elf/setup-vdso.h
+fn=dl_main
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/access.c
+fn=access
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/close_nocancel.c
+fn=__GI___close_nocancel
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/lseek64.c
+fn=lseek
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/open64_nocancel.c
+fn=__open_nocancel
+34 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/read_nocancel.c
+fn=__read_nocancel
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/wordsize-64/fxstat.c
+fn=_fxstat
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/io/../sysdeps/unix/sysv/linux/wordsize-64/xstat.c
+fn=_xstat
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/malloc/scratch_buffer_set_array_size.c
+fn=__libc_scratch_buffer_set_array_size
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/misc/../sysdeps/unix/syscall-template.S
+fn=mprotect
+fn=munmap
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/misc/../sysdeps/unix/sysv/linux/mmap64.c
+fn=mmap
+41 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/posix/../sysdeps/unix/syscall-template.S
+fn=uname
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/setjmp/../sysdeps/x86_64/setjmp.S
+fn=__sigsetjmp
+32 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+49 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+73 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../include/rtld-malloc.h
+fn=strdup
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../string/strcspn.c
+fn=strcspn
+33 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+39 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+40 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+41 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+62 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/memcmp.S
+fn=bcmp
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/multiarch/../strchr.S
+fn=index
+32 5 5 5 0 0 6  0  0  1  0  3  1  1  0  0  0  0  0  0  0  0  0
+67 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+fn=memcpy
+207 10 10 10 0 0 10  0  1  0  3  0  3  1  2  0  0  0  0  0  0  0  0
+208 4 4 4 0 0 4  1  0  2  1  0  0  0  0  0  0  0  0  0  0  0  0
+365 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+366 1 1 1 0 0 1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+389 2 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+391 5 5 5 0 0 5  0  1  0  1  3  0  0  0  0  0  0  0  0  0  0  0
+403 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+430 14 14 14 0 0 14  0  0  0  11  0  1  0  2  0  0  0  0  0  0  0  0
+431 10 10 10 0 0 10  0  1  0  9  0  0  0  0  0  0  0  0  0  0  0  0
+432 10 10 10 0 0 10  0  0  0  5  1  0  0  4  0  0  0  0  0  0  0  0
+433 10 10 10 0 0 10  0  1  0  9  0  0  0  0  0  0  0  0  0  0  0  0
+434 7 7 7 0 0 7  4  0  0  0  2  1  0  0  0  0  0  0  0  0  0  0
+445 13 13 13 0 0 13  0  0  0  10  2  0  0  1  0  0  0  0  0  0  0  0
+446 3 3 3 0 0 3  0  0  0  2  0  0  1  0  0  0  0  0  0  0  0  0
+447 9 9 9 0 0 9  1  1  0  3  3  1  0  0  0  0  0  0  0  0  0  0
+497 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+500 8 8 8 0 0 8  0  0  0  0  0  6  2  0  0  0  0  0  0  0  0  0
+545 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+546 3 3 3 0 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+fn=mempcpy
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+fn=memset
+182 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+338 4 4 4 0 0 4  0  0  0  1  0  1  1  0  0  0  0  1  0  0  0  0
+339 5 5 5 0 0 5  0  0  1  3  0  1  0  0  0  0  0  0  0  0  0  0
+395 93 93 93 0 0 93  0  0  0  85  2  4  0  2  0  0  0  0  0  0  0  0
+405 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+492 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/multiarch/strlen-vec.S
+fn=strlen
+126 2 2 2 0 0 3  0  1  1  0  1  0  0  0  0  0  0  0  0  0  0  0
+139 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+140 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+227 10 10 10 0 0 10  0  0  0  9  1  0  0  0  0  0  0  0  0  0  0  0
+238 9 9 9 0 0 9  0  0  0  9  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/strcmp.S
+fn=strcmp
+171 82 57 53 4 0 55  0  14  34  5  0  1  1  0  0  0  0  0  0  0  0  0
+172 12 7 4 3 0 6  0  2  1  2  0  1  0  0  0  0  0  0  0  0  0  0
+228 9 5 2 3 0 4  2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0
+240 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+244 6 5 5 0 0 5  0  0  0  5  0  0  0  0  0  0  0  0  0  0  0  0
+272 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+443 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+475 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+692 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+725 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+726 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+941 2 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+942 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+1066 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1067 1 1 0 1 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1101 4 3 3 0 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+1191 3 3 2 1 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1225 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1226 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1316 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1350 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1441 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1442 5 3 2 1 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1475 5 4 3 1 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+1476 3 3 3 0 0 3  0  0  0  2  1  0  0  0  0  0  0  0  0  0  0  0
+1566 2 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+1567 8 7 5 2 0 7  0  0  0  7  0  0  0  0  0  0  0  0  0  0  0  0
+1600 6 4 3 1 0 4  0  0  0  4  0  0  0  0  0  0  0  0  0  0  0  0
+1601 4 3 3 0 0 3  0  0  0  2  0  0  1  0  0  0  0  0  0  0  0  0
+1691 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1726 2 2 2 0 0 2  0  0  0  1  0  0  0  1  0  0  0  0  0  0  0  0
+1817 3 3 3 0 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+1850 3 3 3 0 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+1851 2 2 2 0 0 2  0  0  0  1  0  0  1  0  0  0  0  0  0  0  0  0
+1941 4 4 4 0 0 4  0  0  0  3  0  0  0  1  0  0  0  0  0  0  0  0
+1942 4 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+1975 3 3 3 0 0 3  0  0  0  2  1  0  0  0  0  0  0  0  0  0  0  0
+2066 4 3 3 0 0 3  0  0  0  3  0  0  0  0  0  0  0  0  0  0  0  0
+2067 2 2 0 2 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+2102 1 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+2103 3 2 2 0 0 2  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+fn=strncmp
+228 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/../sysdeps/x86_64/strcpy.S
+fn=stpcpy
+71 1 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fl=/usr/src/debug/glibc-2.28-251.el8_10.14.x86_64/string/strdup.c
+fn=strdup
+fl=???
+fn=(below main)
+fn=???
+0 108 69 1 68 0 52  0  39  0  13  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_Exit
+fn=_IO_cleanup
+fn=_IO_default_finish
+fn=_IO_default_setbuf
+fn=_IO_default_xsputn
+fn=_IO_do_write@@GLIBC_2.2.5
+fn=_IO_doallocbuf
+fn=_IO_file_close
+fn=_IO_file_close_it@@GLIBC_2.2.5
+fn=_IO_file_doallocate
+fn=_IO_file_finish@@GLIBC_2.2.5
+fn=_IO_file_fopen@@GLIBC_2.2.5
+0 1 1 1 0 0 1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+fn=_IO_file_open
+fn=_IO_file_overflow@@GLIBC_2.2.5
+fn=_IO_file_setbuf@@GLIBC_2.2.5
+fn=_IO_file_stat
+fn=_IO_file_sync@@GLIBC_2.2.5
+fn=_IO_file_write@@GLIBC_2.2.5
+fn=_IO_file_xsputn@@GLIBC_2.2.5
+0 9 7 1 6 0 5  0  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_IO_flush_all_lockp
+fn=_IO_link_in
+fn=_IO_new_file_init_internal
+fn=_IO_no_init
+fn=_IO_old_init
+0 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_IO_setb
+fn=_IO_un_link
+fn=_IO_unsave_markers
+fn=__GI__IO_un_link.part.1
+fn=__GI_strstr
+0 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=____strtol_l_internal
+fn=____strtoul_l_internal
+0 26 23 23 0 0 23  22  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__alloc_dir
+0 3 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__call_tls_dtors
+fn=__close_nocancel
+fn=__ctype_init
+fn=__cxa_atexit
+fn=__cxa_finalize
+fn=__default_morecore
+fn=__fopen_internal
+fn=__getdents
+fn=__gettimeofday_syscall
+fn=__init_misc
+fn=__internal_atexit
+0 2 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__libc_alloca_cutoff
+0 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__libc_csu_init
+fn=__libc_early_init
+fn=__libc_pthread_init
+0 14 8 8 0 0 8  0  5  1  2  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__libc_sigaction
+0 3 1 1 0 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__memcpy_avx_unaligned_erms
+0 12 12 4 8 0 9  1  3  1  1  2  1  0  0  0  0  0  0  0  0  0  0
+fn=__mempcpy_avx_unaligned_erms
+fn=__memset_avx2_unaligned_erms
+fn=__mpn_cmp
+fn=__mpn_divrem
+0 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__mpn_extract_double
+fn=__mpn_lshift
+fn=__mpn_mul
+fn=__mpn_mul_1
+fn=__mpn_rshift
+fn=__new_exitfn
+fn=__open_nocancel
+fn=__printf_fp
+0 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__printf_fp_l
+0 36 36 8 28 0 18  7  10  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__pthread_initialize_minimal
+0 11 3 3 0 0 3  0  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=__pthread_mutex_unlock_usercnt
+fn=__register_atfork
+0 3 3 3 0 0 3  1  1  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+fn=__run_exit_handlers
+fn=__sched_cpucount
+fn=__sigjmp_save
+fn=__sigsetjmp
+fn=__strchr_avx2
+0 2 2 2 0 0 2  0  0  0  0  1  0  0  0  1  0  0  0  0  0  0  0
+fn=__strchrnul_avx2
+0 11 11 8 3 0 7  1  0  2  1  0  1  0  1  0  1  0  0  0  0  0  0
+fn=__strcpy_avx2
+fn=__strlen_avx2
+0 7 7 5 2 0 7  0  1  0  1  0  0  2  1  0  0  0  1  0  1  0  0
+fn=__strncmp_avx2
+0 124 9 9 0 0 9  0  3  2  2  1  0  0  1  0  0  0  0  0  0  0  0
+fn=__strrchr_avx2
+fn=__unregister_atfork
+fn=__x86_cacheinfo
+0 5 3 3 0 0 3  0  1  1  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_addr
+0 1077 756 756 0 0 756  423  328  5  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_dl_vdso_vsym
+0 3 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_fxstat
+fn=_getopt_internal
+0 6 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_getopt_internal_r
+0 2 2 2 0 0 2  1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+fn=_init
+0 9 3 3 0 0 3  2  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_int_free
+0 22 21 0 21 0 12  3  9  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_int_malloc
+0 31 20 5 15 0 20  3  17  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_int_memalign
+0 3 2 1 1 0 2  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_itoa_word
+0 4 4 1 3 0 3  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_mid_memalign
+0 1 1 0 1 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_pthread_cleanup_pop_restore
+fn=_pthread_cleanup_push_defer
+0 5 5 0 5 0 3  1  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=_setjmp
+fn=bcmp
+fn=brk
+fn=calloc
+fn=check_stdfiles_vtables
+fn=closedir
+fn=elision_init
+fn=exit
+fn=fclose@@GLIBC_2.2.5
+fn=fflush
+fn=fileno
+fn=fopen@@GLIBC_2.2.5
+fn=fprintf
+fn=free
+0 25 25 0 25 0 5  0  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=fsync
+fn=get_common_cache_info
+fn=get_nprocs_conf
+0 2 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=getenv
+0 4 4 4 0 0 4  3  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=getopt
+fn=getpagesize
+fn=getrandom
+fn=getrlimit
+fn=gettimeofday
+0 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=hack_digit
+0 2 2 0 2 0 1  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=handle_intel.constprop.1
+fn=index
+fn=init
+fn=intel_check_word.isra.0
+0 6 6 6 0 0 6  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=malloc
+0 11 7 0 7 0 7  2  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=malloc_hook_ini
+0 2 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=malloc_init_state
+0 35 34 34 0 0 34  1  31  0  2  0  0  0  0  0  0  0  0  0  0  0  0
+fn=memalign
+fn=memalign_hook_ini
+0 1 1 0 1 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=memchr
+fn=memcpy@@GLIBC_2.14
+fn=memmove
+fn=mempcpy
+fn=memrchr
+fn=memset
+fn=mmap
+fn=munmap
+fn=munmap_chunk
+fn=new_do_write
+fn=open
+fn=opendir
+0 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=opendir_tail
+fn=popcount_cpucount
+fn=printf
+0 10 9 0 9 0 5  0  5  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=pthread_attr_init@@GLIBC_2.2.5
+fn=pthread_getaffinity_np@@GLIBC_2.3.4
+fn=pthread_key_create
+fn=pthread_key_delete
+fn=pthread_mutex_lock
+fn=pthread_mutex_unlock
+fn=pthread_self@GLIBC_2.2.5
+fn=pthread_setspecific
+0 3 3 0 3 0 3  1  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=ptmalloc_init.part.0
+0 7 1 1 0 0 1  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=puts
+0 6 6 0 6 0 6  2  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=rawmemchr
+fn=readdir
+0 58 57 57 0 0 57  56  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=rindex
+fn=sbrk
+fn=secure_getenv
+fn=stpcpy
+fn=stpncpy
+fn=strcasecmp
+fn=strcasecmp_l
+fn=strcat
+fn=strchrnul
+fn=strcmp
+fn=strcpy
+fn=strcspn
+fn=strlen
+fn=strncasecmp
+fn=strncasecmp_l
+fn=strncmp
+fn=strncpy
+fn=strnlen
+fn=strpbrk
+fn=strspn
+fn=strtol
+fn=strtoul
+fn=sysconf
+0 2 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=sysmalloc
+0 23 18 18 0 0 18  0  17  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+fn=systrim.isra.1.constprop.11
+fn=tcache_init.part.7
+0 10 9 9 0 0 9  0  7  1  1  0  0  0  0  0  0  0  0  0  0  0  0
+fn=time
+0 1 1 1 0 0 1  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=vfprintf
+0 58 51 5 46 0 33  14  19  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+fn=wcschr
+fn=wcscmp
+fn=wcslen
+fn=wcsnlen
+fn=wmemchr
+fn=wmemset
+fn=write
+summary: 73492666 53988332 3674004 49838169 476159 53988645 43691731 5251 219 10287300 925 1582 1549 37 17 9 4 10 6 4 1 0

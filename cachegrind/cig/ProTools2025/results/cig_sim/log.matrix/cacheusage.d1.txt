@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /home/uqcjin/bin/valgrind/bin/cu_annotate cacheusage.d1.out.41751
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         49152 B, 64 B, 12-way associative
+LL cache:         62914560 B, 64 B, 15-way associative
+WordSize:         4
+Command:          ./Simple/bin/matrix -s 256 -b 16 -v varinfo.txt
+Histogram bins recorded:  Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bins shown:     Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bin sort order: Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#__ Conf#___ Cap#___ Cacheline# 1-words_ 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+         19.7% 17,103,817 (100.0%)  (0.5%)  (92.5%)  (7.0%)          5/0  (98.1%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (1.9%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#___ Comp#__ Conf#___ Cap#___ Cacheline# 1-words_ 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  file:function
+
+<          19.9% 17,091,670 (99.9%)  (0.4%)  (92.5%)  (7.0%)          5/0  (98.2%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (1.8%)  /scratch/user/uqcjin/App/example/Simple/src/matrix.c:
+           33.4% 16,853,762 (98.5%)  (0.0%)  (93.7%)  (6.3%)          2/0  (99.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)    multiply_simple
+            0.3%     90,437  (0.5%)  (0.0%)  (18.5%)  (81.5%)        385/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    multiply_blocked
+           25.0%    131,079  (0.8%)  (50.0%)   (0.0%)  (50.0%)          3/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    main
+            3.1%      8,193  (0.0%)  (0.0%)   (0.0%)  (104.8%)         33/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    verify_results
+
+
+<           1.8%      9,734  (0.1%)  (90.5%)   (0.0%)  (5.1%)         53/0   (0.9%)  (1.9%)  (1.0%)  (3.6%)  (0.1%)  (0.2%)  (0.7%)  (1.1%)  (2.3%)  (1.3%)  (2.3%)  (0.8%)  (0.6%)  (0.2%)  (0.0%)  (83.2%)  ???:
+            1.6%      8,196  (0.0%)  (100.0%)   (0.0%)  (0.0%)         63/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    __memset_avx2_unaligned_erms
+
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#___ Comp#__ Conf#___ Cap#___ Cacheline# 1-words_ 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  function:file
+
+>          33.4% 16,853,762 (98.5%)  (0.0%)  (93.7%)  (6.3%)          2/0  (99.5%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.5%)  multiply_simple:/scratch/user/uqcjin/App/example/Simple/src/matrix.c
+
+
+>           0.3%     90,437  (0.5%)  (0.0%)  (18.5%)  (81.5%)        385/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  multiply_blocked:/scratch/user/uqcjin/App/example/Simple/src/matrix.c
+
+
+>          25.0%    131,079  (0.8%)  (50.0%)   (0.0%)  (50.0%)          3/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  main:/scratch/user/uqcjin/App/example/Simple/src/matrix.c
+
+
+>           1.6%      8,196  (0.0%)  (100.0%)   (0.0%)  (0.0%)         63/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  __memset_avx2_unaligned_erms:???
+
+
+>           3.1%      8,193  (0.0%)  (0.0%)   (0.0%)  (104.8%)         33/0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  verify_results:/scratch/user/uqcjin/App/example/Simple/src/matrix.c
+
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /scratch/user/uqcjin/App/example/Simple/src/matrix.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- /scratch/user/uqcjin/App/example/Simple/src/matrix.c
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#___ Comp#__ Conf#___ Cap#___ Cacheline# 1-words_ 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+             0          0  (0.0%)  (0.0%)   (0.0%)  (0.0%)            0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)    annotated: files known & above threshold & readable, line numbers known
+             0          0  (0.0%)  (0.0%)   (0.0%)  (0.0%)            0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)    annotated: files known & above threshold & readable, line numbers unknown
+             0          0  (0.0%)  (0.0%)   (0.0%)  (0.0%)            0   (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  unannotated: files known & above threshold & two or more non-identical
+         19.9% 17,091,670 (99.9%)  (0.4%)  (92.5%)  (7.0%)          5/0  (98.2%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (1.8%)  unannotated: files known & above threshold & unreadable 
+          6.2%      2,413  (0.0%)  (80.8%)   (0.6%)  (18.8%)         16/1   (6.4%)  (10.5%)  (6.4%)  (9.6%)  (3.0%)  (4.5%)  (2.0%)  (4.8%)  (1.1%)  (4.0%)  (1.0%)  (2.7%)  (15.0%)  (9.5%)  (0.9%)  (18.8%)  unannotated: files known & below threshold
+          1.8%      9,734  (0.1%)  (90.5%)   (0.0%)  (5.1%)         53/0   (0.9%)  (1.9%)  (1.0%)  (3.6%)  (0.1%)  (0.2%)  (0.7%)  (1.1%)  (2.3%)  (1.3%)  (2.3%)  (0.8%)  (0.6%)  (0.2%)  (0.0%)  (83.2%)  unannotated: files unknown
+

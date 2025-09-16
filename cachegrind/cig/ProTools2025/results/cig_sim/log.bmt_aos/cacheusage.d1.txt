@@ -1,0 +1,346 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /home/uqcjin/bin/valgrind/bin/cu_annotate cacheusage.d1.out.42358
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         49152 B, 64 B, 12-way associative
+LL cache:         62914560 B, 64 B, 15-way associative
+WordSize:         4
+Command:          ./Himeno/bin/bmt_aos.O3 -s M -l 10 -v varinfo.txt
+Histogram bins recorded:  Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bins shown:     Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Bin sort order: Access# Miss# Comp# Conf# Cap# Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#__ Conf#__ Cap#____ Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+          4.7% 63,281,752 (100.0%)  (5.8%)  (0.0%)  (94.2%)          21/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.3%)  (0.0%)  (0.0%)  (0.0%)  (1.3%)  (0.0%)  (1.0%)  (0.0%)  (97.4%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#____ Comp#__ Conf#__ Cap#____ Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  file:function
+
+<           4.7% 63,275,724 (100.0%)  (5.8%)  (0.0%)  (94.2%)          21/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.3%)  (0.0%)  (0.0%)  (0.0%)  (1.3%)  (0.0%)  (1.0%)  (0.0%)  (97.4%)  /scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c:
+            4.4% 59,605,299  (94.2%)  (0.0%)  (0.0%)  (100.0%)          22/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.3%)  (0.0%)  (0.0%)  (0.0%)  (1.4%)  (0.0%)  (1.0%)  (0.0%)  (97.2%)    jacobi_packed._omp_fn.0
+           25.0%  1,048,579   (1.7%)  (100.0%)  (0.0%)   (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    mat_set_packedA
+           25.0%  1,048,578   (1.7%)  (100.0%)  (0.0%)   (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    mat_set_packedB
+           25.0%  1,048,578   (1.7%)  (100.0%)  (0.0%)   (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    mat_set_packedC
+
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Access#_______ Miss#___ Comp#__ Conf#__ Cap#_____ Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words  function:file
+
+>           4.4% 59,605,299 (94.2%)  (0.0%)  (0.0%)  (100.0%)          22/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.3%)  (0.0%)  (0.0%)  (0.0%)  (1.4%)  (0.0%)  (1.0%)  (0.0%)  (97.2%)  jacobi_packed._omp_fn.0:/scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c
+
+
+>          25.0%  1,048,579  (1.7%)  (100.0%)  (0.0%)    (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  mat_set_packedA:/scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c
+
+
+>          25.0%  1,048,578  (1.7%)  (100.0%)  (0.0%)    (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  mat_set_packedB:/scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c
+
+
+>          25.0%  1,048,578  (1.7%)  (100.0%)  (0.0%)    (0.0%)           3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  mat_set_packedC:/scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c
+
+
+--------------------------------------------------------------------------------
+-- Annotated source file: /scratch/user/uqcjin/App/examples/Himeno/src/../../Himeno/src/himenoBMTxpa_aos.c
+--------------------------------------------------------------------------------
+Access#_______ Miss#___ Comp#__ Conf#_ Cap#_____ Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+-- line 237 ----------------------------------------
+             .          .                                             .                                                                                                                                      varinfo_file_print(getName(packA), &MR_PACKED((&packA), 0, 0, 0).a0, &MR_PACKED((&packA),  imax-1, jmax-1, kmax-1).a3);
+             .          .                                             .                                                                                                                                      varinfo_file_print(getName(packB), &MR_PACKED((&packB), 0, 0, 0).b0, &MR_PACKED((&packB),  imax-1, jmax-1, kmax-1).bnd);
+             .          .                                             .                                                                                                                                      varinfo_file_print(getName(packC), &MR_PACKED((&packC), 0, 0, 0).c0, &MR_PACKED((&packC),  imax-1, jmax-1, kmax-1).wrk1);
+             .          .                                             .                                                                                                                                      varinfo_file_close();
+             .          .                                             .                                                                                                                                    }
+             .          .                                             .                                                                                                                                   
+             .          .                                             .                                                                                                                                    mat_set_init(&p);
+             .          .                                             .                                                                                                                                    mat_set(&wrk2,0,0.0);
+         33.3%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          3/2  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    mat_set_packedA(&packA, 1.0, 1.0, 1.0, 1.0/6.0);
+             .          .                                             .                                                                                                                                    mat_set_packedB(&packB, 0.0, 0.0, 0.0, 1.0);
+             .          .                                             .                                                                                                                                    mat_set_packedC(&packC, 1.0, 1.0, 1.0, 0.0);
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    omp_set_num_threads(num_threads);
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    /*
+             .          .                                             .                                                                                                                                     *    Start measuring
+             .          .                                             .                                                                                                                                     */
+             .          .                                             .                                                                                                                                    nn= 3;
+             .          .                                             .                                                                                                                                    printf(" Start rehearsal measurement process.\n");
+             .          .                                             .                                                                                                                                    printf(" Measure the performance in %d times.\n\n",nn);
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    cpu0= second();
+         50.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          2/1  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    gosa= jacobi_packed(nn,&packA,&packB,&packC,&p,&wrk2);
+             .          .                                             .                                                                                                                                    cpu1= second();
+             .          .                                             .                                                                                                                                    cpu= cpu1 - cpu0;
+             .          .                                             .                                                                                                                                    flop = (double)(kmax-1)*(double)(jmax-1)*(double)(imax-1)*34.0;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    if(cpu != 0.0)
+         33.3%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          3/4  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      xmflops2= flop/cpu*1.e-6*nn;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    printf(" MFLOPS: %f time(s): %f %e\n\n",xmflops2,cpu,gosa);
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    nn= num_loops;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    printf(" Now, start the actual measurement process.\n");
+             .          .                                             .                                                                                                                                    printf(" The loop will be excuted in %d times\n",nn);
+             .          .                                             .                                                                                                                                    printf(" This will take about one minute.\n");
+-- line 273 ----------------------------------------
+-- line 310 ----------------------------------------
+             .          .                                             .                                                                                                                                      return true;
+             .          .                                             .                                                                                                                                    }
+             .          .                                             .                                                                                                                                    if(!strcmp(size,"S") || !strcmp(size,"s")){
+             .          .                                             .                                                                                                                                      is[0]= 64;
+             .          .                                             .                                                                                                                                      is[1]= 64;
+             .          .                                             .                                                                                                                                      is[2]= 128;
+             .          .                                             .                                                                                                                                      return true;
+             .          .                                             .                                                                                                                                    }
+         50.0%          1  (0.0%)  (100.0%) (0.0%)    (0.0%)          2/2  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    if(!strcmp(size,"M") || !strcmp(size,"m")){
+             .          .                                             .                                                                                                                                      is[0]= 128;
+             .          .                                             .                                                                                                                                      is[1]= 128;
+             .          .                                             .                                                                                                                                      is[2]= 256;
+             .          .                                             .                                                                                                                                      return true;
+             .          .                                             .                                                                                                                                    }
+             .          .                                             .                                                                                                                                    if(!strcmp(size,"L") || !strcmp(size,"l")){
+             .          .                                             .                                                                                                                                      is[0]= 256;
+             .          .                                             .                                                                                                                                      is[1]= 256;
+-- line 326 ----------------------------------------
+-- line 334 ----------------------------------------
+             .          .                                             .                                                                                                                                      return true;
+             .          .                                             .                                                                                                                                    }
+             .          .                                             .                                                                                                                                    return false;
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  int
+             .          .                                             .                                                                                                                                  newMat(Matrix* Mat, int mnums,int mrows, int mcols, int mdeps, int pad)
+             .          .                                             .                                                                                                                                  {
+         50.0%          1  (0.0%)  (100.0%) (0.0%)    (0.0%)          2/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)    Mat->mnums= mnums;
+             .          .                                             .                                                                                                                                    Mat->mrows= mrows;
+             .          .                                             .                                                                                                                                    Mat->mcols= mcols;
+             .          .                                             .                                                                                                                                    Mat->mdeps= mdeps;
+             .          .                                             .                                                                                                                                    Mat->buffer= NULL;
+             .          .                                             .                                                                                                                                    Mat->buffer= (float*) 
+             .          .                                             .                                                                                                                                      malloc((mnums * mrows * mcols * mdeps +pad) * sizeof(float));
+             .          .                                             .                                                                                                                                    
+             .          .                                             .                                                                                                                                    Mat->m = Mat->buffer + pad;
+-- line 350 ----------------------------------------
+-- line 352 ----------------------------------------
+             .          .                                             .                                                                                                                                    return(Mat->m != NULL) ? 1:0;
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  int
+             .          .                                             .                                                                                                                                  newMat_packedA(PackedMatrixA* Mat, int mrows, int mcols, int mdeps, int pad)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    Mat->mrows= mrows;
+             .          .                                             .                                                                                                                                    Mat->mcols= mcols;
+        100.0%          1  (0.0%)  (100.0%) (0.0%)    (0.0%)          1/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)   (0.0%)    Mat->mdeps= mdeps;
+             .          .                                             .                                                                                                                                    Mat->buffer= NULL;
+             .          .                                             .                                                                                                                                    Mat->buffer= (PackedElementA*) 
+             .          .                                             .                                                                                                                                      malloc(mrows * mcols * mdeps * sizeof(PackedElementA) + pad);
+             .          .                                             .                                                                                                                                    
+             .          .                                             .                                                                                                                                    Mat->m = Mat->buffer + pad;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    return(Mat->m != NULL) ? 1:0;
+             .          .                                             .                                                                                                                                  }
+-- line 368 ----------------------------------------
+-- line 382 ----------------------------------------
+             .          .                                             .                                                                                                                                    return(Mat->m != NULL) ? 1:0;
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  int
+             .          .                                             .                                                                                                                                  newMat_packedC(PackedMatrixC* Mat, int mrows, int mcols, int mdeps, int pad)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    Mat->mrows= mrows;
+             .          .                                             .                                                                                                                                    Mat->mcols= mcols;
+        100.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/7  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    Mat->mdeps= mdeps;
+             .          .                                             .                                                                                                                                    Mat->buffer= NULL;
+             .          .                                             .                                                                                                                                    Mat->buffer= (PackedElementC*) 
+             .          .                                             .                                                                                                                                      malloc(mrows * mcols * mdeps * sizeof(PackedElementC) + pad);
+             .          .                                             .                                                                                                                                    
+             .          .                                             .                                                                                                                                    Mat->m = Mat->buffer + pad;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    return(Mat->m != NULL) ? 1:0;
+             .          .                                             .                                                                                                                                  }
+-- line 398 ----------------------------------------
+-- line 446 ----------------------------------------
+             .          .                                             .                                                                                                                                    Mat->mdeps= 0;
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  void
+             .          .                                             .                                                                                                                                  mat_set(Matrix* Mat, int l, float val)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int i,j,k;
+             .          .                                             .                                                                                                                                  
+        100.0%        129  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/1  (98.4%)  (0.0%)  (0.8%)  (0.0%)  (0.8%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      for(i=0; i<Mat->mrows; i++)
+             .          .                                             .                                                                                                                                        for(j=0; j<Mat->mcols; j++)
+             .          .                                             .                                                                                                                                          for(k=0; k<Mat->mdeps; k++)
+         25.0%    262,145  (0.4%)  (100.0%) (0.0%)    (0.0%)          3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)            MR(Mat,l,i,j,k)= val;
+         14.3%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          7/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  void
+             .          .                                             .                                                                                                                                  mat_set_packedA(PackedMatrixA* Mat, float val_a0, float val_a1, float val_a2, float val_a3)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int i,j,k;
+             .          .                                             .                                                                                                                                  
+        100.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/5  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      for(i=0; i<Mat->mrows; i++)
+             .          .                                             .                                                                                                                                        for(j=0; j<Mat->mcols; j++)
+             .          .                                             .                                                                                                                                          for(k=0; k<Mat->mdeps; k++)
+             .          .                                             .                                                                                                                                          {
+         25.0%  1,048,577  (1.7%)  (100.0%) (0.0%)    (0.0%)          3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)            MR_PACKED(Mat,i,j,k).a0 = val_a0;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).a1 = val_a1;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).a2 = val_a2;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).a3 = val_a3;
+             .          .                                             .                                                                                                                                          }
+         25.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          4/8  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  void
+             .          .                                             .                                                                                                                                  mat_set_packedB(PackedMatrixB* Mat, float val_b0, float val_b1, float val_b2, float val_bnd)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int i,j,k;
+             .          .                                             .                                                                                                                                  
+        100.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/5  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      for(i=0; i<Mat->mrows; i++)
+             .          .                                             .                                                                                                                                        for(j=0; j<Mat->mcols; j++)
+             .          .                                             .                                                                                                                                          for(k=0; k<Mat->mdeps; k++)
+             .          .                                             .                                                                                                                                          {
+         25.0%  1,048,576  (1.7%)  (100.0%) (0.0%)    (0.0%)          4/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)            MR_PACKED(Mat,i,j,k).b0 = val_b0;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).b1 = val_b1;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).b2 = val_b2;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).bnd = val_bnd;
+             .          .                                             .                                                                                                                                          }
+         25.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          4/8  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  void
+             .          .                                             .                                                                                                                                  mat_set_packedC(PackedMatrixC* Mat, float val_c0, float val_c1, float val_c2, float val_wrk1)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int i,j,k;
+             .          .                                             .                                                                                                                                  
+        100.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/5  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      for(i=0; i<Mat->mrows; i++)
+             .          .                                             .                                                                                                                                        for(j=0; j<Mat->mcols; j++)
+             .          .                                             .                                                                                                                                          for(k=0; k<Mat->mdeps; k++)
+             .          .                                             .                                                                                                                                          {
+         25.0%  1,048,576  (1.7%)  (100.0%) (0.0%)    (0.0%)          4/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)            MR_PACKED(Mat,i,j,k).c0 = val_c0;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).c1 = val_c1;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).c2 = val_c2;
+             .          .                                             .                                                                                                                                            MR_PACKED(Mat,i,j,k).wrk1 = val_wrk1;
+             .          .                                             .                                                                                                                                          }
+         25.0%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          4/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)   (0.0%)  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  void
+             .          .                                             .                                                                                                                                  mat_set_init(Matrix* Mat)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int  i,j,k,l;
+             .          .                                             .                                                                                                                                    float tt;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    for(i=0; i<Mat->mrows; i++)
+         99.2%        128  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/4  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      for(j=0; j<Mat->mcols; j++)
+             .          .                                             .                                                                                                                                        for(k=0; k<Mat->mdeps; k++)
+         25.0%    262,272  (0.4%)  (100.0%) (0.0%)    (0.0%)          3/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)          MR(Mat,0,i,j,k)= (float)(i*i)
+             .          .                                             .                                                                                                                                            /(float)((Mat->mrows - 1)*(Mat->mrows - 1));
+         14.3%          1  (0.0%)  (0.0%) (0.0%)  (100.0%)          7/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  float
+             .          .                                             .                                                                                                                                  jacobi_packed(int nn, PackedMatrixA* packA, PackedMatrixB* packB, PackedMatrixC* packC, Matrix* p, Matrix* wrk2)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    int    i,j,k,n,imax,jmax,kmax;
+             .          .                                             .                                                                                                                                    float  gosa,gosa1,s0,ss;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    imax= p->mrows-1;
+        100.0%          2  (0.0%)  (0.0%) (0.0%)  (100.0%)          1/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    jmax= p->mcols-1;
+             .          .                                             .                                                                                                                                    kmax= p->mdeps-1;
+          7.1%          4  (0.0%)  (0.0%) (0.0%)  (200.0%)         28/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  #pragma omp parallel shared(packA,packB,packC,p,wrk2,nn,imax,jmax,kmax,omega,gosa) private(i,j,k,s0,ss,gosa1,n)
+             .          .                                             .                                                                                                                                  {
+             .          .                                             .                                                                                                                                    for(n=0 ; n<nn ; n++){
+             .          .                                             .                                                                                                                                  #pragma omp barrier
+             .          .                                             .                                                                                                                                  #pragma omp master
+             .          .                                             .                                                                                                                                      {
+             .          .                                             .                                                                                                                                        gosa = 0.0;
+             .          .                                             .                                                                                                                                      }
+         14.1%         11  (0.0%)  (0.0%) (0.0%)  (100.0%)          7/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)      gosa1= 0.0;
+             .          .                                             .                                                                                                                                  #pragma omp for nowait
+             .          .                                             .                                                                                                                                      for(i=1 ; i<imax; i++)
+          0.3%      1,638  (0.0%)  (0.0%) (0.0%)  (100.0%)        388/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (99.2%)  (0.0%)  (0.8%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)        for(j=1 ; j<jmax ; j++)
+          0.0%         37  (0.0%)  (0.0%) (0.0%)  (100.0%)      6,817/6  (0.0%)  (0.0%)  (0.0%)  (35.1%)  (0.0%) (0.0%)  (0.0%)  (64.9%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)          for(k=1 ; k<kmax ; k++){
+          8.3% 13,210,470 (20.9%)  (0.0%) (0.0%)  (100.0%)         12/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (1.6%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (98.4%)            s0= MR_PACKED(packA,i,j,k).a0*MR(p,0,i+1,j,  k)
+          0.0%      1,638  (0.0%)  (0.0%) (0.0%)  (100.0%)     64,135/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)              + MR_PACKED(packA,i,j,k).a1*MR(p,0,i,  j+1,k)
+          0.0%     24,570  (0.0%)  (0.0%) (0.0%)  (100.0%)      4,267/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)              + MR_PACKED(packA,i,j,k).a2*MR(p,0,i,  j,  k+1)
+             .          .                                             .                                                                                                                                              + MR_PACKED(packB,i,j,k).b0
+         10.5% 16,537,261 (26.1%)  (0.0%) (0.0%)  (100.0%)          9/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (2.5%)  (0.0%)  (0.0%)  (0.0%)  (97.5%)               *( MR(p,0,i+1,j+1,k) - MR(p,0,i+1,j-1,k)
+          3.2%  3,328,429  (5.3%)  (0.0%) (0.0%)  (100.0%)         31/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (99.9%)                - MR(p,0,i-1,j+1,k) + MR(p,0,i-1,j-1,k) )
+             .          .                                             .                                                                                                                                              + MR_PACKED(packB,i,j,k).b1
+          2.1%  3,326,791  (5.3%)  (0.0%) (0.0%)  (100.0%)         47/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)               *( MR(p,0,i,j+1,k+1) - MR(p,0,i,j-1,k+1)
+             .          .                                             .                                                                                                                                                - MR(p,0,i,j+1,k-1) + MR(p,0,i,j-1,k-1) )
+             .          .                                             .                                                                                                                                              + MR_PACKED(packB,i,j,k).b2
+          0.0%     50,778  (0.1%)  (0.0%) (0.0%)  (100.0%)      3,105/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (3.2%)  (96.8%)               *( MR(p,0,i+1,j,k+1) - MR(p,0,i-1,j,k+1)
+             .          .                                             .                                                                                                                                                - MR(p,0,i+1,j,k-1) + MR(p,0,i-1,j,k-1) )
+         12.5% 13,208,832 (20.9%)  (0.0%) (0.0%)  (100.0%)          8/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (3.1%)  (0.0%)  (0.0%)  (0.0%)  (96.9%)              + MR_PACKED(packC,i,j,k).c0 * MR(p,0,i-1,j,  k)
+             .          .                                             .                                                                                                                                              + MR_PACKED(packC,i,j,k).c1 * MR(p,0,i,  j-1,k)
+             .          .                                             .                                                                                                                                              + MR_PACKED(packC,i,j,k).c2 * MR(p,0,i,  j,  k-1)
+             .          .                                             .                                                                                                                                              + MR_PACKED(packC, i,j,k).wrk1;
+             .          .                                             .                                                                                                                                  
+          0.0%      1,638  (0.0%)  (0.0%) (0.0%)  (100.0%)     96,012/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (100.0%)            ss= (s0*MR_PACKED(packA,i,j,k).a3 - MR(p,0,i,j,k))*MR_PACKED(packB,i,j,k).bnd;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                            gosa1+= ss*ss;
+             .          .                                             .                                                                                                                                  
+          3.1%  3,303,859  (5.2%)  (0.0%) (0.0%)  (100.0%)         32/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (6.2%)  (0.0%)  (93.7%)            MR(wrk2,0,i,j,k)= MR(p,0,i,j,k) + omega*ss;
+             .          .                                             .                                                                                                                                          }
+             .          .                                             .                                                                                                                                  #pragma omp barrier
+             .          .                                             .                                                                                                                                  #pragma omp for nowait
+             .          .                                             .                                                                                                                                      for(i=1 ; i<imax ; i++)
+          0.8%      1,638  (0.0%)  (0.0%) (0.0%)  (100.1%)        128/1  (0.0%)  (99.3%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.7%)        for(j=1 ; j<jmax ; j++)
+             .          .                                             .                                                                                                                                          for(k=1 ; k<kmax ; k++)
+         23.9%  6,607,692 (10.4%)  (0.0%) (0.0%)  (100.0%)          4/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (6.2%)  (0.0%)  (93.7%)            MR(p,0,i,j,k)= MR(wrk2,0,i,j,k);
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  #pragma omp critical
+             .          .                                             .                                                                                                                                      {
+         33.3%         13  (0.0%)  (0.0%) (0.0%)  (108.3%)          3/0  (91.7%)  (0.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (8.3%)        gosa+= gosa1;
+             .          .                                             .                                                                                                                                      }
+             .          .                                             .                                                                                                                                    } /* end n loop */
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                    return(gosa);
+             .          .                                             .                                                                                                                                  } 
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                  double
+             .          .                                             .                                                                                                                                  second()
+-- line 583 ----------------------------------------
+-- line 585 ----------------------------------------
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    struct timeval tm;
+             .          .                                             .                                                                                                                                    double t ;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    static int base_sec = 0,base_usec = 0;
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    gettimeofday(&tm, NULL);
+             .          .                                             .                                                                                                                                    
+         37.5%          3  (0.0%)  (0.0%) (0.0%)  (150.0%)          4/2  (0.0%)  (100.0%)  (0.0%)  (0.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    if(base_sec == 0 && base_usec == 0)
+             .          .                                             .                                                                                                                                      {
+             .          .                                             .                                                                                                                                        base_sec = tm.tv_sec;
+             .          .                                             .                                                                                                                                        base_usec = tm.tv_usec;
+             .          .                                             .                                                                                                                                        t = 0.0;
+             .          .                                             .                                                                                                                                    } else {
+             .          .                                             .                                                                                                                                      t = (double) (tm.tv_sec-base_sec) + 
+         33.3%          2  (0.0%)  (0.0%) (0.0%)  (200.0%)          6/4  (0.0%)  (0.0%)  (0.0%)  (100.0%)  (0.0%) (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)        ((double) (tm.tv_usec-base_usec))/1.0e6 ;
+             .          .                                             .                                                                                                                                    }
+             .          .                                             .                                                                                                                                  
+             .          .                                             .                                                                                                                                    return t ;
+             .          .                                             .                                                                                                                                  }
+             .          .                                             .                                                                                                                                  
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Access#_______ Miss#____ Comp#__ Conf#__ Cap#____ Cacheline# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words 
+
+          4.7% 63,275,724 (100.0%)  (5.8%)  (0.0%)  (94.2%)          21/0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.3%)  (0.0%)  (0.0%)  (0.0%)  (1.3%)  (0.0%)  (1.0%)  (0.0%)  (97.4%)    annotated: files known & above threshold & readable, line numbers known
+             0          0   (0.0%)  (0.0%)  (0.0%)   (0.0%)             0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)    annotated: files known & above threshold & readable, line numbers unknown
+             0          0   (0.0%)  (0.0%)  (0.0%)   (0.0%)             0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  unannotated: files known & above threshold & two or more non-identical
+             0          0   (0.0%)  (0.0%)  (0.0%)   (0.0%)             0  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)  (0.0%)   (0.0%)  unannotated: files known & above threshold & unreadable 
+          5.1%      4,197   (0.0%)  (71.8%)  (1.3%)  (28.1%)          19/1  (9.0%)  (14.2%)  (5.1%)  (13.2%)  (3.0%)  (4.8%)  (1.5%)  (4.6%)  (0.8%)  (3.8%)  (1.0%)  (3.4%)  (10.1%)  (6.9%)  (1.0%)  (17.5%)  unannotated: files known & below threshold
+          4.2%      1,831   (0.0%)  (44.1%)  (0.5%)  (37.7%)          19/2  (2.2%)  (7.2%)  (4.0%)  (20.3%)  (0.9%)  (2.4%)  (4.1%)  (5.4%)  (11.2%)  (6.6%)  (10.5%)  (4.4%)  (3.1%)  (3.4%)  (0.9%)  (13.4%)  unannotated: files unknown
+

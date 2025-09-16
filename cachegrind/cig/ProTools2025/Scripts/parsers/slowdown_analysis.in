@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+
+import sys
+import json
+import re
+from collections import defaultdict
+
+def load_json(json_file):
+    with open(json_file) as jf:
+        data = json.load(jf)
+
+    native_results = {
+        exe: {
+            size: [tuple(run) for run in runs]
+            for size, runs in size_dict.items()
+        }
+        for exe, size_dict in data["Native"].items()
+    }
+
+    cig_results = {
+        exe: {
+            size: [tuple(run) for run in runs]
+            for size, runs in size_dict.items()
+        }
+        for exe, size_dict in data["CIG"].items()
+    }
+
+    return native_results, cig_results
+
+def print_results(native_results, cig_results):
+    print("Native run:")
+    for exe, size_dict in native_results.items():
+        print(exe)
+        for label, runs in size_dict.items():
+            print(label)
+            for run in runs:
+                print(*run)
+
+    print("CIG run:")
+    for exe, size_dict in cig_results.items():
+        print(exe)
+        for label, runs in size_dict.items():
+            print(label)
+            for run in runs:
+                print(*run)
+
+def print_avg_slowdown(native_results, cig_results):
+    print("\nAveraged Performance Slowdown:")
+
+    for exe, native_size_dict in native_results.items():
+        print("Executable:", exe)
+        for size, native_runs in native_size_dict.items():
+            cig_size_dict = cig_results.get(exe, {})
+            cig_runs = cig_size_dict.get(size, [])
+            if not cig_runs:
+                print(f"  {size}: No CIG data available.")
+                continue
+
+            avg_native = sum( run[-1] for run in native_runs) / len(native_runs)
+            avg_cig = sum(run[-1] for run in cig_runs) / len(cig_runs)
+            ratio = avg_cig / avg_native if avg_native != 0 else float("inf")
+            print(f"    {size}: {ratio:.2f}x")
+
+def print_usage():
+    print("Usage:", sys.argv[0], "input_json_file")
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print_usage()
+        sys.exit(1)
+
+    native_results, cig_results = load_json(sys.argv[1])
+
+    #print_results(native_results, cig_results)
+    print_avg_slowdown(native_results, cig_results)
+

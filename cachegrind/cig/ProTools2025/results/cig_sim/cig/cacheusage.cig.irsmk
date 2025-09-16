@@ -1,0 +1,462 @@
+desc SUM: access# miss# compulsory# conflict# capacity#
+desc CR: in_var out_var total# compulsory# conflict# capacity#
+desc CU: var access# 1-words 2-words 3-words 4-words 5-words 6-words 7-words 8-words 9-words 10-words 11-words 12-words 13-words 14-words 15-words 16-words
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/main.c:main:157
+SUM: 12 5 0 0 5
+CR: b ubl 2 0 0 2
+CR: b ubr 1 0 0 1
+CR: b ucl 1 0 0 1
+CU: ubl 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:83
+SUM: 1093750000 314070000 0 268120000 45950000
+CR: b cfl 74475000 0 63630000 10845000
+CR: b cfc 3650000 0 3120000 530000
+CR: x x 3 0 0 3
+CR: x ubl 399997 0 0 399997
+CR: x ubc 50000 0 0 50000
+CR: dbl x 64 0 0 64
+CR: dbl cfc 63585000 0 63585000 0
+CR: dbl cfr 3165000 0 3165000 0
+CR: dbl ubc 1599992 0 0 1599992
+CR: dbl ubr 7869968 0 0 7869968
+CR: dbl ucl 1744986 0 0 1744986
+CR: dbl ucc 124997 0 0 124997
+CR: dbl ucr 34993 0 0 34993
+CR: dbc x 64 0 0 64
+CR: dbc cfr 62610000 0 62610000 0
+CR: dbc ubl 4140000 0 4140000 0
+CR: dbc ubr 1599992 0 0 1599992
+CR: dbc ucl 7869968 0 0 7869968
+CR: dbc ucc 1744986 0 0 1744986
+CR: dbc ucr 124997 0 0 124997
+CR: dbc ufl 34993 0 0 34993
+CR: dbr x 64 0 0 64
+CR: dbr ubl 62610000 0 62610000 0
+CR: dbr ubc 4140000 0 4140000 0
+CR: dbr ucl 1599992 0 0 1599992
+CR: dbr ucc 7869968 0 0 7869968
+CR: dbr ucr 1744986 0 0 1744986
+CR: dbr ufl 124997 0 0 124997
+CR: dbr ufc 34993 0 0 34993
+CU: x 585 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 195
+CU: cfl 0 0 74475000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 67380000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 67149997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 5789992 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 9469960 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 11214946 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 9739951 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucr 0 0 1904976 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufl 0 0 159990 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 34993 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:84
+SUM: 937500000 234830000 0 200250000 34580000
+CR: x x 4 0 0 4
+CR: x ubl 409996 0 0 409996
+CR: x ubc 45000 0 0 45000
+CR: dcl x 64 0 0 64
+CR: dcl ubc 62610000 0 62610000 0
+CR: dcl ubr 4140000 0 4140000 0
+CR: dcl ucc 1599992 0 0 1599992
+CR: dcl ucr 7869968 0 0 7869968
+CR: dcl ufl 1744986 0 0 1744986
+CR: dcl ufc 124997 0 0 124997
+CR: dcl ufr 34993 0 0 34993
+CR: dcc b 34993 0 0 34993
+CR: dcc x 64 0 0 64
+CR: dcc ubr 62610000 0 62610000 0
+CR: dcc ucl 4140000 0 4140000 0
+CR: dcc ucr 1599992 0 0 1599992
+CR: dcc ufl 7869968 0 0 7869968
+CR: dcc ufc 1744986 0 0 1744986
+CR: dcc ufr 124997 0 0 124997
+CR: dcr b 124997 0 0 124997
+CR: dcr x 35057 0 0 35057
+CR: dcr ucl 62610000 0 62610000 0
+CR: dcr ucc 3105000 0 3105000 0
+CR: dcr ufl 1599992 0 0 1599992
+CR: dcr ufc 7869968 0 0 7869968
+CR: dcr ufr 1744986 0 0 1744986
+CU: b 0 0 159990 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: x 715445 0 0 0 0 0 0 0 0 0 0 0 4999 0 9998 0 20192
+CU: ubl 0 0 409996 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 62655000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 4704992 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucr 0 0 9469960 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufl 0 0 11214946 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 9739951 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 1904976 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:85
+SUM: 781250000 245320000 0 201485000 43835000
+CR: x x 38 0 0 38
+CR: x cfr 799996 0 0 799996
+CR: x ubl 8004976 0 0 8004976
+CR: x ubc 855000 0 0 855000
+CR: x ubr 14997 0 0 14997
+CR: x ucl 34993 0 0 34993
+CR: dfl b 1744986 0 0 1744986
+CR: dfl x 160054 0 0 160054
+CR: dfl ucc 63645000 0 63645000 0
+CR: dfl ucr 3105000 0 3105000 0
+CR: dfl ufc 1599992 0 0 1599992
+CR: dfl ufr 7869968 0 0 7869968
+CR: dfc b 7869968 0 0 7869968
+CR: dfc x 1890040 0 0 1890040
+CR: dfc ucr 62585000 0 62585000 0
+CR: dfc ufl 4165000 0 4165000 0
+CR: dfc ufr 1599992 0 0 1599992
+CR: dfr b 1599992 0 0 1599992
+CR: dfr x 9685008 0 0 9685008
+CR: dfr ufl 62585000 0 62585000 0
+CR: dfr ufc 4165000 0 4165000 0
+CU: b 0 0 11214946 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: x 336607600 0 349997 0 45000 0 50000 0 45000 0 45000 0 2634979 0 784996 0 7780168
+CU: cfc 0 0 175000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 799996 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 8004976 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 855000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 14997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 34993 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 63645000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucr 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufl 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 5764992 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 9469960 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:86
+SUM: 937500000 237360000 0 202785000 34575000
+CR: x x 3 0 0 3
+CR: x cfc 1375000 0 1375000 0
+CR: x cfr 125000 0 125000 0
+CR: x ubc 399997 0 0 399997
+CR: x ubr 50000 0 0 50000
+CR: cbl x 11305000 0 0 11305000
+CR: cbl ufc 62585000 0 62585000 0
+CR: cbl ufr 4165000 0 4165000 0
+CR: cbc b 4165000 0 4165000 0
+CR: cbc x 11135000 0 0 11135000
+CR: cbc ufr 62585000 0 62585000 0
+CR: cbr b 61550000 0 61550000 0
+CR: cbr x 10455000 0 0 10455000
+CR: cbr dbl 4845000 0 4140000 705000
+CU: b 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: x 1512543266 0 365001 0 75000 0 70000 0 75000 0 85000 0 7624989 0 2214997 0 22385016
+CU: dbl 0 0 4845000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 1375000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 399997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 50000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 62585000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 66750000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:87
+SUM: 703125000 322580000 0 288000000 34580000
+CR: x x 3 0 0 3
+CR: x dbc 64140000 0 64040000 100000
+CR: x dbr 13355000 0 13330000 25000
+CR: x dcl 630000 0 630000 0
+CR: x cfc 8980000 0 8980000 0
+CR: x cfr 770000 0 770000 0
+CR: x ubc 299998 0 0 299998
+CR: x ubr 29999 0 0 29999
+CR: ccl dbl 73280000 0 62610000 10670000
+CR: ccl dbc 4845000 0 4140000 705000
+CR: ccc dbc 9140000 0 0 9140000
+CR: ccc dbr 64770000 0 62610000 2160000
+CR: ccc dcl 4215000 0 4140000 75000
+CR: ccr dcl 73280000 0 62610000 10670000
+CR: ccr dcc 4845000 0 4140000 705000
+CU: x 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+CU: dbl 0 0 73280000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dbc 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dbr 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcl 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcc 0 0 4845000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 8980000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 770000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 299998 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 29999 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:88
+SUM: 781250000 245300000 0 201465000 43835000
+CR: x x 61 0 0 61
+CR: x ubl 1489993 0 0 1489993
+CR: x ubc 7314969 0 0 7314969
+CR: x ubr 854987 0 0 854987
+CR: x ucl 14997 0 0 14997
+CR: x ucc 34993 0 0 34993
+CR: cfl dcc 72065000 0 61570000 10495000
+CR: cfl dcr 6060000 0 5180000 880000
+CR: cfc dcr 72065000 0 61570000 10495000
+CR: cfc dfl 4865000 0 4160000 705000
+CR: cfr dfl 73260000 0 62590000 10670000
+CR: cfr dfc 4865000 0 4160000 705000
+CU: x 183 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 61
+CU: dcc 0 0 73280000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcr 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfl 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfc 0 0 4865000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 1489993 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 7314969 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 854987 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 14997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 34993 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:89
+SUM: 781250000 236025000 0 201445000 34580000
+CR: x x 4 0 0 4
+CR: x cfr 394996 0 0 394996
+CR: x ubl 60000 0 0 60000
+CR: ubl dfc 73260000 0 62590000 10670000
+CR: ubl dfr 4865000 0 4160000 705000
+CR: ubc dfr 73260000 0 62590000 10670000
+CR: ubc cbl 4865000 0 4160000 705000
+CR: ubr cbl 72065000 0 61570000 10495000
+CR: ubr cbc 4885000 0 4180000 705000
+CU: x 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4
+CU: dfc 0 0 73260000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfr 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbl 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbc 0 0 4885000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 394996 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 60000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:90
+SUM: 546875000 234825000 0 200250000 34575000
+CR: x x 3 0 0 3
+CR: x cfr 394997 0 0 394997
+CR: x ubl 55000 0 0 55000
+CR: ucl cbc 73240000 0 62570000 10670000
+CR: ucl cbr 4885000 0 4180000 705000
+CR: ucc cbr 73240000 0 62570000 10670000
+CR: ucc ccl 4885000 0 4180000 705000
+CR: ucr ccl 73240000 0 62570000 10670000
+CR: ucr ccc 4885000 0 4180000 705000
+CU: x 9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+CU: cbc 0 0 73240000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbr 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ccl 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ccc 0 0 4885000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 394997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 55000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/rmatmult3.c:rmatmult3:91
+SUM: 546875000 245780000 0 200250000 45530000
+CR: x x 20 0 0 20
+CR: x cfc 109999 0 0 109999
+CR: x cfr 8664991 0 0 8664991
+CR: x ubl 885000 0 0 885000
+CR: x ubc 689997 0 0 689997
+CR: x ubr 944993 0 0 944993
+CR: x ucl 110000 0 0 110000
+CR: ufl x 465000 0 465000 0
+CR: ufl ccc 73240000 0 62570000 10670000
+CR: ufl ccr 3185000 0 2655000 530000
+CR: ufc x 12485000 0 11940000 545000
+CR: ufc ccr 65640000 0 54810000 10830000
+CR: ufr x 65175000 0 54345000 10830000
+CR: ufr ccr 9300000 0 9285000 15000
+CR: ufr cfl 3650000 0 3120000 530000
+CU: x 136715060 0 0 0 19535000 0 58590000 0 0 0 0 0 0 0 0 0 20
+CU: ccc 0 0 73240000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ccr 0 0 78125000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfl 0 0 3650000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 109999 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 8664991 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 885000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 689997 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 944993 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 110000 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:157
+SUM: 45294 22999 2831 20168 0
+CR: b cfl 21907 2638 19269 0
+CR: b cfc 437 129 308 0
+CU: cfl 0 0 22259 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 437 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:158
+SUM: 45294 22999 2831 20168 0
+CR: dbl cfc 21606 2638 18968 0
+CR: dbl cfr 738 129 609 0
+CU: cfl 0 0 43 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 21907 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 738 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:159
+SUM: 45294 22647 2831 19816 0
+CR: dbc cfr 21606 2638 18968 0
+CR: dbc ubl 738 129 609 0
+CU: cfr 0 0 21606 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 738 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:160
+SUM: 45294 22647 2831 19816 0
+CR: dbr ubl 21606 2638 18968 0
+CR: dbr ubc 738 129 609 0
+CU: ubl 0 0 21606 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 738 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:161
+SUM: 45294 22999 2831 20168 0
+CR: dcl ubc 21300 2638 18662 0
+CR: dcl ubr 1044 129 915 0
+CU: cfl 0 0 44 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 21606 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 1044 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:162
+SUM: 45294 22647 2831 19816 0
+CR: dcc ubr 21300 2638 18662 0
+CR: dcc ucl 1045 129 916 0
+CU: ubr 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:163
+SUM: 45294 22647 2831 19816 0
+CR: dcr ucl 21300 2638 18662 0
+CR: dcr ucc 1045 129 916 0
+CU: ucl 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:164
+SUM: 45294 22647 2831 19816 0
+CR: dfl ucc 21300 2638 18662 0
+CR: dfl ucr 1045 129 916 0
+CU: ucc 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucr 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:165
+SUM: 45294 22647 2831 19816 0
+CR: dfc ucr 21300 2638 18662 0
+CR: dfc ufl 1045 129 916 0
+CU: ucr 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufl 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:166
+SUM: 45294 22647 2831 19816 0
+CR: dfr ufl 21300 2638 18662 0
+CR: dfr ufc 1045 129 916 0
+CU: ufl 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:167
+SUM: 45294 22647 2831 19816 0
+CR: cbl ufc 21300 2638 18662 0
+CR: cbl ufr 1045 129 916 0
+CU: ufc 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 1045 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:168
+SUM: 45294 22647 2831 19816 0
+CR: cbc b 694 86 608 0
+CR: cbc ufr 21300 2638 18662 0
+CU: b 0 0 694 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 21300 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:169
+SUM: 45294 22999 2831 20168 0
+CR: cbr b 21329 2667 18662 0
+CR: cbr dbl 1046 130 916 0
+CU: b 0 0 21681 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dbl 0 0 1046 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:170
+SUM: 45294 22647 2831 19816 0
+CR: ccl dbl 21329 2667 18662 0
+CR: ccl dbc 1046 130 916 0
+CU: dbl 0 0 21329 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dbc 0 0 1046 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:171
+SUM: 45294 22647 2831 19816 0
+CR: ccc dbc 21329 2667 18662 0
+CR: ccc dbr 702 87 615 0
+CU: dbc 0 0 21329 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dbr 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:172
+SUM: 45294 22647 2831 19816 0
+CR: ccr dbr 21673 2710 18963 0
+CR: ccr dcl 702 87 615 0
+CU: dbr 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcl 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:173
+SUM: 22647 22647 2831 19816 0
+CR: cfl dcl 21673 2710 18963 0
+CR: cfl dcc 702 87 615 0
+CU: dcl 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcc 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:174
+SUM: 22647 22647 2831 19816 0
+CR: cfc dcc 21673 2710 18963 0
+CR: cfc dcr 702 87 615 0
+CU: dcc 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dcr 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:175
+SUM: 22647 22647 2831 19816 0
+CR: cfr dcr 21673 2710 18963 0
+CR: cfr dfl 702 87 615 0
+CU: dcr 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfl 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:176
+SUM: 22647 22647 2831 19816 0
+CR: ubl dfl 21673 2710 18963 0
+CR: ubl dfc 702 87 615 0
+CU: dfl 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfc 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:177
+SUM: 22647 22647 2831 19816 0
+CR: ubc dfc 21673 2710 18963 0
+CR: ubc dfr 702 87 615 0
+CU: dfc 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: dfr 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:178
+SUM: 22647 22647 2831 19816 0
+CR: ubr dfr 21673 2710 18963 0
+CR: ubr cbl 702 87 615 0
+CU: dfr 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbl 0 0 702 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:179
+SUM: 22647 22647 2831 19816 0
+CR: ucl cbl 21673 2710 18963 0
+CR: ucl cbc 352 44 308 0
+CU: cbl 0 0 21673 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbc 0 0 352 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:180
+SUM: 22647 22647 2831 19816 0
+CR: ucc cbc 22023 2753 19270 0
+CR: ucc cbr 352 44 308 0
+CU: cbc 0 0 22023 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cbr 0 0 352 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:181
+SUM: 22647 22647 2831 19816 0
+CR: ucr cbr 22023 2753 19270 0
+CR: ucr ccl 352 44 308 0
+CU: cbr 0 0 22023 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ccl 0 0 352 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:182
+SUM: 22647 22647 2831 19816 0
+CR: ufl ccl 22023 2753 19270 0
+CR: ufl ccc 352 44 308 0
+CU: ccl 0 0 22023 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ccc 0 0 352 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:183
+SUM: 22647 22647 2831 19816 0
+CR: ufc ccc 22023 2753 19270 0
+CU: ccc 0 0 22023 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:184
+SUM: 22647 22647 2831 19816 0
+CR: ufr ccr 22375 2797 19578 0
+CU: ccr 0 0 22375 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Line: /scratch/user/uqcjin/App/example/IRSmk/IRSmk.ori/utility.c:init:188
+SUM: 12201 3051 3050 0 1
+CR: x x 2282 2282 0 0
+CR: x cfl 58 58 0 0
+CR: x cfc 64 64 0 0
+CR: x cfr 64 64 0 0
+CR: x ubl 64 64 0 0
+CR: x ubc 64 64 0 0
+CR: x ubr 64 64 0 0
+CR: x ucl 64 64 0 0
+CR: x ucc 64 64 0 0
+CR: x ucr 64 64 0 0
+CR: x ufl 64 64 0 0
+CR: x ufc 64 64 0 0
+CR: x ufr 64 64 0 0
+CU: x 6846 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2282
+CU: cfl 0 0 59 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfc 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: cfr 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubl 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubc 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ubr 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucl 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucc 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ucr 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufl 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufc 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+CU: ufr 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
